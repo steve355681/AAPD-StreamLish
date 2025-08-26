@@ -1,0 +1,107 @@
+// 載入背景圖片
+.landing-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(15deg);
+  transform-origin: bottom left;
+  width: 200%; /* 放大避免邊緣出現空白 */
+  height: 250%;
+  background-image: url("/assets/images/landing-bg.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  z-index: -1;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,  #16132C, rgba(#16132C, 0.2));
+  }
+}
+
+.landing-logo-zoomIn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  --tx: calc(-50% + 10px);
+  --ty: calc(-50% - 26px);
+  transform: translateX(var(--tx)) translateY(var(--ty)) scale(120);
+}
+.landing-logo-fadeIn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+}
+
+
+.landing-btn {
+  max-width: 500px;
+  background: linear-gradient(to right, $primary, #6E02F5, $secondary);
+  border-color: transparent;
+  border-width: 0px;
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
+  transform: translateY(100%);
+  opacity: 0;
+  &:hover {
+    background-color: rgba($white, 0.3);
+    background-blend-mode: overlay;
+  }
+  &:focus {
+    border-width: 4px;
+    border-color: rgba($secondary-100, .5);
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 3);
+  }
+}
+
+.landing-animation-step1 {
+  animation: zoomIn 0.8s forwards;
+  animation-delay: 0s;
+}
+.landing-animation-step2 {
+  animation: fadeIn 0.4s forwards;
+  animation-delay: 0.8s;
+}
+.landing-animation-step3 {
+  animation: fadeIn 0.6s forwards;
+  animation-delay: 1.2s;
+}
+.landing-animation-step4 {
+  animation: fadeIn 0.8s forwards;
+  animation-delay: 1.8s;
+}
+.landing-animation-step5 {
+  animation: fadeUp 0.8s forwards;
+  animation-delay: 2.6s;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: translateX(var(--tx)) translateY(var(--ty)) scale(120);
+  }
+  to {
+    transform: translateX(var(--tx)) translateY(var(--ty)) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
