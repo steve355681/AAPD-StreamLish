@@ -1,0 +1,123 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    //===============================
+    // 修改 bootstrap 原有設定
+    //===============================
+    // scss-docs-start utils-text
+    "font-size": map-merge(
+        map-get($utilities, "font-size"),
+        (
+          values: map-merge(
+            map-get(map-get($utilities, "font-size"), "values"),
+            (
+              xxs: $font-size-xxs,
+              xs: $font-size-xs,
+              sm: $font-size-sm,
+              md: $font-size-md,
+              lg: $font-size-lg,
+            )
+          ),
+        )
+      ),
+    "font-weight": map-merge(
+        map-get($utilities, "font-weight"),
+        (
+          values: map-merge(
+            map-get(map-get($utilities, "font-weight"), "values"),
+            (
+              heavy: $font-weight-heavy,
+            )
+          ),
+        )
+      ),
+    // scss-docs-end utils-text
+    //===============================
+    // 覆蓋 bootstrap 原有設定
+    //===============================
+    // scss-docs-start utils-border-radius
+    "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+          null: var(--#{$prefix}border-radius),
+          0: 0,
+          1: var(--#{$prefix}border-radius-xs),
+          2: var(--#{$prefix}border-radius-sm),
+          3: var(--#{$prefix}border-radius),
+          4: var(--#{$prefix}border-radius-lg),
+          5: var(--#{$prefix}border-radius-xl),
+          6: var(--#{$prefix}border-radius-xxl),
+          circle: 50%,
+          pill: var(--#{$prefix}border-radius-pill),
+        ),
+      ),
+    "rounded-top": (
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded-top,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-xs),
+        2: var(--#{$prefix}border-radius-sm),
+        3: var(--#{$prefix}border-radius),
+        4: var(--#{$prefix}border-radius-lg),
+        5: var(--#{$prefix}border-radius-xl),
+        6: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill),
+      ),
+    ),
+    "rounded-end": (
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded-end,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-xs),
+        2: var(--#{$prefix}border-radius-sm),
+        3: var(--#{$prefix}border-radius),
+        4: var(--#{$prefix}border-radius-lg),
+        5: var(--#{$prefix}border-radius-xl),
+        6: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill),
+      ),
+    ),
+    "rounded-bottom": (
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded-bottom,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-xs),
+        2: var(--#{$prefix}border-radius-sm),
+        3: var(--#{$prefix}border-radius),
+        4: var(--#{$prefix}border-radius-lg),
+        5: var(--#{$prefix}border-radius-xl),
+        6: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill),
+      ),
+    ),
+    "rounded-start": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: (
+        null: var(--#{$prefix}border-radius),
+        0: 0,
+        1: var(--#{$prefix}border-radius-xs),
+        2: var(--#{$prefix}border-radius-sm),
+        3: var(--#{$prefix}border-radius),
+        4: var(--#{$prefix}border-radius-lg),
+        5: var(--#{$prefix}border-radius-xl),
+        6: var(--#{$prefix}border-radius-xxl),
+        circle: 50%,
+        pill: var(--#{$prefix}border-radius-pill),
+      ),
+    ),
+    //===============================
+    // 新增 utilities 設定
+    //===============================
+  )
+);
