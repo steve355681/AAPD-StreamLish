@@ -1,3 +1,84 @@
-.index-title {
-  font-size: 100px;
+.carousel-inner {
+  height: 340px; /* 固定輪播高度 */
+}
+
+
+.carousel-img {
+  height: 100%;
+  object-fit: cover;     /* 圖片裁切 */
+  object-position: center; /* 圖片置中 */
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%; /* 小圓點 */
+  background-color: #fff;
+}
+
+
+/* 黑色漸層遮罩 */
+.carousel-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%; /* 控制漸層範圍 */
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,0) 0%,     /* 上面完全透明 */
+    rgba(0,0,0,0.6) 20%,  /* 中段已經開始變暗 */
+    rgba(0,0,0,1) 60%, /* 更黑 */
+    rgba(0,0,0,1) 100%    /* 最底部全黑 */
+   );
+}
+
+.carousel-gradient-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* 控制漸層範圍 */
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,0) 0%,     /* 上面完全透明 */
+    rgba(0,0,0,1) 100%    /* 最底部全黑 */
+   );
+}
+
+.nav-pills .nav-link {
+  color: $netural-500;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* hover 或 active */
+.btn-check:checked + .nav-link,
+.nav-pills .nav-link:hover {
+  border: 1px solid $netural-500;
+  background-color: $tertiary-900;
+  color: $white;
+}
+
+//
+/* 預設箭頭透明 */
+#movieCarousel .carousel-control-prev,
+#movieCarousel .carousel-control-next {
+  opacity: 0;
+  transition: opacity 0.3s ease; /* 平滑效果 */
+}
+
+/* 滑鼠移到輪播區域，顯示箭頭 */
+#movieCarousel:hover .carousel-control-prev,
+#movieCarousel:hover .carousel-control-next {
+  opacity: 1;
+}
+
+/* 隱藏水平滾動條，但保留滾動功能 */
+.overflow-auto::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.overflow-auto {
+  -ms-overflow-style: none;  /* IE, Edge */
+  scrollbar-width: none;     /* Firefox */
 }
