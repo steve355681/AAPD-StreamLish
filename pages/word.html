@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>單字收藏</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <div class="container-lg p-0">
+      <!-- Navbar&Tab -->
+      <section>
+        <nav class="bg-tertiary-950">
+          <div class="d-flex justify-content-center border-bottom border-neutral-500">
+            <div class="nav nav-tabs w-100" id="nav-tab" role="tablist">
+              <button 
+              class="nav-link border-0 col-6 py-3 text-netural-400 fs-8 fw-normal" 
+              id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home">影片收藏</button>
+              
+              <button class="nav-link col-6 border-top-0 border-start-0 border-end-0 border-4 border-primary-500 py-3 fs-8 fw-bold text-white" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile">單字收藏</button>
+            </div>
+          </div>
+        </nav>
+        <!-- 內容 -->
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active px-5 h-100" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" style="background: linear-gradient(to bottom, rgba(81,79,98,1) 0%,rgba(8,9,49,1) 100%);">
+              這是影片收藏內容
+            </div>
+            <div class="tab-pane fade px-5 pt-8 m-0" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" style="background: linear-gradient(to bottom, rgba(81,79,98,1) 0%,rgba(8,9,49,1) 100%);">
+              <!-- 按鈕 -->
+              <section class="pb-5">
+                <div class="d-flex align-items-center justify-content-center">
+                  
+                    <div class="col-5 d-flex align-items-center">
+                      <div class="col-6">
+                        <div class="dropdown">
+                          <button class="btn btn-outline-netural-500 py-2 px-5 rounded-pill text-white fs-8 w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../assets/images/English.png" alt="">
+                            <span class="material-symbols-outlined align-bottom">keyboard_arrow_down</span>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">英文</a></li>
+                            <li><a class="dropdown-item" href="#">日文</a></li>
+                            <li><a class="dropdown-item" href="#">韓文</a></li>
+                            <li><a class="dropdown-item" href="#">西班牙文</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="dropdown ms-1">
+                          <button class="btn btn-outline-netural-500 py-2 px-5 rounded-pill text-white fs-8 w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            類別
+                            <span class="material-symbols-outlined align-bottom">keyboard_arrow_down</span>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">劇情</a></li>
+                            <li><a class="dropdown-item" href="#">喜劇</a></li>
+                            <li><a class="dropdown-item" href="#">動作</a></li>
+                            <li><a class="dropdown-item" href="#">恐怖</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  
+
+                  <p class="ms-2 me-2 text-netural-500 fs-8">｜</p>
+
+
+                    <div class="w-50 d-flex align-items-center">
+                      <div class="col-4">
+                        <button class="btn rounded-pill btn-tertiary-900 border border-neutral-500 text-white fs-8 w-100">
+                          全部
+                        </button>
+                      </div>
+                      
+                      <div class="col-4">
+                        <a href="#" class="fs-8 text-netural-400 ms-4 border-0 w-100">未掌握</a>
+                      </div>
+                      
+                      <div class="col-4">
+                        <a href="#" class="fs-8 text-netural-400 ms-4 border-0 w-100">已掌握</a>
+                      </div>
+                    </div>
+
+                </div>
+              </section>
+            </div>
+          </div>
+      </section>
+    </div>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
