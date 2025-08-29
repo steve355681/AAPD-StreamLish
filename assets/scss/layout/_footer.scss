@@ -1,4 +1,60 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+/* Footer 底色 */ 
+.footer-bg {
+  background-color: rgba($tertiary-600, 0.6); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  border: none;
+}
+
+.nav-pills {
+  .nav-link {
+    border-radius: 999px;
+    transition: all 0.2s ease-in-out;
+    color: $white;
+
+    small {
+      color: $white;
+    }
+
+    .icon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-color: $white; // 預設白色
+      -webkit-mask: no-repeat center / contain;
+      mask: no-repeat center / contain;
+      transition: background-color 0.2s ease-in-out;
+      margin-bottom: 2px;
+    }
+
+    /* 指定 mask 圖檔 */
+    .icon-home {
+      -webkit-mask-image: url("../assets/images/home.svg");
+      mask-image: url("../assets/images/home.svg");
+    }
+    .icon-favorite {
+      -webkit-mask-image: url("../assets/images/favorite.svg");
+      mask-image: url("../assets/images/favorite.svg");
+    }
+    .icon-search {
+      -webkit-mask-image: url("../assets/images/search.svg");
+      mask-image: url("../assets/images/search.svg");
+    }
+
+    &.active {
+      background-color: $tertiary-900;
+      color: $white;
+
+      .icon {
+        background-color: $primary-500; // active 時變藍色
+      }
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: none;
+      outline: none;
+    }
+  }
 }
