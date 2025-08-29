@@ -1,61 +1,10 @@
-.arrow-down{
-  width: 16px;
-  height: 16px;
+.fs-8{
+  font-size: 14px;
 }
 
-ul, li{
-  list-style-type: none;
-  margin-bottom: 0;
-  padding-left: 0;
+.py-55{
+  padding-top: 5.5px;
+  padding-bottom: 5.5px;
 }
 
-.left-nav .btn{
-  width: 72px;
-  height: 32px;
-}
-
-.search{
-  width: 20px;
-  height: 20px;
-}
-
-.edit{
-  width: 20px;
-  height: 20px;
-}
-
-.new-to-old{
-  width: 198px;
-}
-
-.speaker{
-  width: 12px;
-  height: 12px;
-}
-
-.white-20{
-  background-color: rgba($white, 0.2);
-}
-
-.blue-20{
-  background-color: rgba(#3C8AF7, 0.2);
-}
-
-// .tab-pane{
-//   background: linear-gradient(to bottom,
-//     rgba($tertiary-700,0) 0%,     /* 上面完全透明 */
-//     rgba($tertiary-800,0.6) 20%,  /* 中段已經開始變暗 */
-//     rgba($tertiary-950,1) 60%, /* 更黑 */
-//     rgba($black,1) 100%    /* 最底部全黑 */
-//   );
-// }
-
-.liner{
-  // position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   width: 100%;
-    background: linear-gradient(to bottom, rgba(32, 29, 53,1) 0%,rgba(7, 4, 31,1) 100%);
-}
+$nav-tabs-link-active-bg: $tertiary-950;
