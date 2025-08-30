@@ -41,21 +41,14 @@ ul, li{
   background-color: rgba(#3C8AF7, 0.2);
 }
 
-// .tab-pane{
-//   background: linear-gradient(to bottom,
-//     rgba($tertiary-700,0) 0%,     /* 上面完全透明 */
-//     rgba($tertiary-800,0.6) 20%,  /* 中段已經開始變暗 */
-//     rgba($tertiary-950,1) 60%, /* 更黑 */
-//     rgba($black,1) 100%    /* 最底部全黑 */
-//   );
-// }
+.violet-35{
+  background-color: rgba(#D017E2, 0.35);
+}
 
 .liner{
-  // position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   width: 100%;
     background: linear-gradient(to bottom, rgba(32, 29, 53,1) 0%,rgba(7, 4, 31,1) 100%);
+}
+
+.bottom-padding{
+  padding-bottom: 75px;
 }
