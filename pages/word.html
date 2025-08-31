@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>單字收藏</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+
+      <!-- Navbar&Tab -->
+      <section>
+        <nav class="bg-tertiary-950">
+          <div class="container">
+            <div class="d-flex justify-content-center border-bottom border-neutral-500">
+              <!-- 上方選單按鈕 -->
+              <div class="nav nav-tabs w-100" id="nav-tab" role="tablist">
+                <button 
+                class="nav-link border-0 col-6 py-3 text-netural-400 fs-9 fw-normal disabled" 
+                id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-video" type="button" role="tab" aria-controls="nav-video" aria-expanded="false">影片收藏</button>
+                
+                <button class="nav-link col-6 border-top-0 border-start-0 border-end-0 border-4 border-primary-500 py-3 fs-9 fw-bold text-white" id="nav-vocab-tab" data-bs-toggle="tab" data-bs-target="#nav-vocab" type="button" role="tab" aria-controls="nav-vocab" aria-current="page" aria-expanded="true">單字收藏</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- 內容 -->
+          <div class="tab-content" id="nav-tabContent">
+            <!-- 影片收藏內容 -->
+            <div class="tab-pane fade px-5 liner" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
+              這是影片收藏內容
+            </div>
+            <!-- 單字收藏內容 -->
+            <div class="tab-pane fade show active pt-8 m-0 liner" id="nav-vocab" role="tabpanel" aria-labelledby="nav-vocab-tab">
+              <div class="liner">
+              <!-- 按鈕nav -->
+              <section class="pb-5">
+                <div class="container">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <!-- nav左側dropdown -->
+                    <div class="left-nav d-flex align-items-center">
+                      <button class="btn btn-outline-netural-500 text-white fs-9 rounded-pill align-items-center d-flex justify-content-center" type="button" id="dropdownMenuLanguage" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="../assets/images/English.png" alt="">
+                        <span class="arrow-down material-symbols-outlined mb-1">keyboard_arrow_down</span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark"
+                      aria-labelledby="dropdownMenuLanguage">
+                        <li><a class="dropdown-item" href="#">英文</a></li>
+                        <li><a class="dropdown-item" href="#">日文</a></li>
+                        <li><a class="dropdown-item" href="#">韓文</a></li>
+                        <li><a class="dropdown-item" href="#">西班牙文</a></li>
+                      </ul>
+    
+                      <div class="dropdown ms-1">
+                        <button class="btn btn-outline-netural-500 text-white fs-9 rounded-pill align-items-center d-flex justify-content-center" type="button" id="dropdownMenuButtonType" data-bs-toggle="dropdown" aria-expanded="false">
+                          類別
+                          <span class="arrow-down material-symbols-outlined mb-1">keyboard_arrow_down</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButtonType">
+                          <li><a class="dropdown-item" href="#">職場</a></li>
+                          <li><a class="dropdown-item" href="#">日常生活</a></li>
+                          <li><a class="dropdown-item" href="#">專業</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <!-- nav右側 -->
+                    <p class="ms-2 me-2 text-netural-500 fs-9">｜</p>
+          
+                    <ul class=" right-nav d-flex align-items-center ps-0">
+                      <li><input type="radio" 
+                      class="btn-check" name="options" id="option1" autocomplete="off" checked>
+                        <label class="btn rounded-pill btn-tertiary-900 border border-neutral-500 text-white fs-9" for="option1">全部</label>
+                      </li>
+                      <li>
+                        <a href="#" class="fs-9 link-netural-400 ms-2 border-0">未掌握</a>
+                      </li>
+                      <li>
+                        <a href="#" class="fs-9 link-netural-400 ms-2 border-0">已掌握</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- 篩選nav -->
+              <section class="mb-5">
+                <div class="container">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <div class="d-flex">
+                      <!-- 由新到舊 -->
+                      <div class="new-to-old dropdown">
+                        <button class="btn text-white fs-9 align-items-center d-flex justify-content-center border-0 ps-0" type="button" id="dropdownMenuButtonType" data-bs-toggle="dropdown" aria-expanded="false">
+                          由新到舊
+                          <span class="arrow-down material-symbols-outlined mb-1 ms-1">keyboard_arrow_down</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark"  aria-labelledby="dropdownMenuButtonType">
+                          <li><a class="dropdown-item fs-9" href="#">由新到舊</a></li>
+                          <li><a class="dropdown-item fs-9" href="#">由舊到新</a></li>
+                        </ul>
+                      </div>
+                      <!-- 搜尋 -->
+                      <a href="#" class="text-white fs-9 d-flex align-items-center me-3 ms-auto">
+                        搜尋
+                        <span class="search material-symbols-outlined ms-1">search</span>
+                      </a>
+                    </div>
+                    <!-- 編輯 -->
+                    <a href="#" class="text-white fs-9 d-flex align-items-center ps-2 border-start border-start-netural-500">
+                      編輯
+                      <span class="edit material-symbols-outlined ms-1">edit</span>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              
+              <!-- 卡片區 -->
+              <section class="bottom-padding">
+                <div class="container">
+                  <ul>
+                    <li class="card bg-tertiary-900 p-6 rounded-2 mb-6">
+                      <div class="d-flex justify-content-between">
+                        <div class="me-5">
+                          <h1 class="text-white fs-7 fw-bold mb-3">miraculous</h1>
+                          <h2 class="text-white fs-10 mb-3">a.神奇的, 超自然的, 奇蹟般的</h2>
+                          <button class="btn fs-11 text-white rounded-pill white-20">日常生活</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 blue-20">未掌握</button>
+                        </div>
+    
+                        <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
+                          <a href="#" class="text-white fs-10 d-flex align-items-center mb-8">
+                            英
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                          <a href="#" class="text-white fs-10 d-flex align-items-center">
+                            美
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card bg-tertiary-900 p-6 rounded-2 mb-6">
+                      <div class="d-flex justify-content-between">
+                        <div class="me-5">
+                          <h1 class="text-white fs-7 fw-bold mb-3">loan</h1>
+                          <h2 class="text-white fs-10 mb-3">v. 借款<br>n. 貸款, 借款</h2>
+                          <button class="btn fs-11 text-white rounded-pill white-20">職場</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 blue-20">未掌握</button>
+                        </div>
+    
+                        <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
+                          <a href="#" class="text-white fs-10 d-flex align-items-center mb-8">
+                            英
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                          <a href="#" class="text-white fs-10 d-flex align-items-center">
+                            美
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card bg-tertiary-900 p-6 rounded-2 mb-6">
+                      <div class="d-flex justify-content-between">
+                        <div class="me-5">
+                          <h1 class="text-white fs-7 fw-bold mb-3">assure</h1>
+                          <h2 class="text-white fs-10 mb-3">v. 擔保, 確保</h2>
+                          <button class="btn fs-11 text-white rounded-pill white-20">職場</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                        </div>
+    
+                        <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
+                          <a href="#" class="text-white fs-10 d-flex align-items-center mb-8">
+                            英
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                          <a href="#" class="text-white fs-10 d-flex align-items-center">
+                            美
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card bg-tertiary-900 p-6 rounded-2 mb-6">
+                      <div class="d-flex justify-content-between">
+                        <div class="me-5">
+                          <h1 class="text-white fs-7 fw-bold mb-3">coma</h1>
+                          <h2 class="text-white fs-10 mb-3">n. 昏迷</h2>
+                          <button class="btn fs-11 text-white rounded-pill white-20">醫療</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                        </div>
+    
+                        <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
+                          <a href="#" class="text-white fs-10 d-flex align-items-center mb-8">
+                            英
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                          <a href="#" class="text-white fs-10 d-flex align-items-center">
+                            美
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card bg-tertiary-900 p-6 rounded-2 mb-6">
+                      <div class="d-flex justify-content-between">
+                        <div class="me-5">
+                          <h1 class="text-white fs-7 fw-bold mb-3">dispute</h1>
+                          <h2 class="text-white fs-10 mb-3">n. 爭議, 爭吵<br>v. 糾紛, 爭奪, 抵抗</h2>
+                          <button class="btn fs-11 text-white rounded-pill white-20">職場</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                        </div>
+    
+                        <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
+                          <a href="#" class="text-white fs-10 d-flex align-items-center mb-8">
+                            英
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                          <a href="#" class="text-white fs-10 d-flex align-items-center">
+                            美
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card bg-tertiary-900 p-6 rounded-2 mb-6">
+                      <div class="d-flex justify-content-between">
+                        <div class="me-5">
+                          <h1 class="text-white fs-7 fw-bold mb-3">compensative</h1>
+                          <h2 class="text-white fs-10 mb-3">a. 償還的, 償還的</h2>
+                          <button class="btn fs-11 text-white rounded-pill white-20">日常生活</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                        </div>
+    
+                        <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
+                          <a href="#" class="text-white fs-10 d-flex align-items-center mb-8">
+                            英
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                          <a href="#" class="text-white fs-10 d-flex align-items-center">
+                            美
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card bg-tertiary-900 p-6 rounded-2 mb-6">
+                      <div class="d-flex justify-content-between">
+                        <div class="me-5">
+                          <h1 class="text-white fs-7 fw-bold mb-3">semantic</h1>
+                          <h2 class="text-white fs-10 mb-3">a. 語義的</h2>
+                          <button class="btn fs-11 text-white rounded-pill white-20">日常生活</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                        </div>
+    
+                        <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
+                          <a href="#" class="text-white fs-10 d-flex align-items-center mb-8">
+                            英
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                          <a href="#" class="text-white fs-10 d-flex align-items-center">
+                            美
+                            <span class="speaker material-symbols-outlined ms-1 mb-4 align-bottom">volume_up</span>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- 未掌握單字測驗按鈕 -->
+                <a href="#" class="btn rounded-pill w-100 text-white btn-primary-500 mb-8 py-5 bottom">未掌握單字測驗</a>
+                </div>
+              </section>
+            </div>
+          </div>
+      </section>
+
+      <div class="container fixed-bottom">
+        <%- include('./layout/footer'); -%>
+      </div>
+
+      <script>var myCollapse = document.getElementById('nav-vocab-tab')
+var bsCollapse = new bootstrap.Collapse(myCollapse, {
+  toggle: false
+})</script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

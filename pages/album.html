@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+    <title>album</title>
+  </head>
+  <body class="bg-black text-white">
+
+  <!-- 預覽圖片  -->
+  <div class="card bg-dark border-0 rounded-2 overflow-hidden">
+    <div class="position-relative">
+      <!-- 圖片 -->
+      <img src="../assets/images/friends9.png" class="w-100 h-100 object-fit-cover" alt="friends9">
+
+      <!-- 播放進度條 (放在圖片上) -->
+      <div class="position-absolute bottom-0 start-0 w-100">
+        <div class="progress" style="height: 6px; background-color: rgba(255,255,255,0.3);">
+          <div class="progress-bar" role="progressbar" style="width: 30%; background-color: white;"></div>
+        </div>
+      </div>
+
+      <!-- 右上角：投放 & 關閉 -->
+      <div class="position-absolute top-0 end-0 mt-5 me-6 d-flex gap-2">
+        <span class="material-icons-outlined text-white bg-dark bg-opacity-50 rounded-circle p-1">cast</span>
+        <span class="material-icons-outlined text-white bg-dark bg-opacity-50 rounded-circle p-1">close</span>
+      </div>
+
+      <!-- 右下角：音量 -->
+      <div class="position-absolute bottom-0 end-0 m-6">
+        <span class="material-icons-outlined text-white bg-dark bg-opacity-50 rounded-circle p-1">volume_up</span>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h5>EP1 摩妮卡有新室友</h1>
+    <p>蕾秋在婚禮當天前離開未婚夫，搬進去和摩妮卡同住，卻發現沒老爸的信用卡借後盾，自力更生其實比想像中困難。</p>
+  </div>
+
+  <div class="card bg-dark text-white border-0 p-3 rounded-3">
+  <!-- 標題與副標 -->
+  <h6 class="fw-bold mb-1">EP1 摩妮卡有新室友</h6>
+  <p class="small text-secondary mb-3">
+    蕾秋在婚禮當天前離開未婚夫，搬進去和摩妮卡同住，卻發現沒老爸的信用卡借後盾，自力更生其實比想像中困難。
+  </p>
+
+  <!-- 主播放按鈕 -->
+  <div class="d-grid mb-3">
+    <button class="btn btn-primary rounded-pill fw-bold">
+      <span class="material-icons-outlined align-middle me-1">play_arrow</span>
+      播放・第一季 EP1
+    </button>
+  </div>
+
+  <!-- 下方三個操作 -->
+  <div class="d-flex justify-content-around text-center">
+    <div>
+      <span class="material-icons-outlined d-block mb-1">share</span>
+      <small>分享</small>
+    </div>
+    <div>
+      <span class="material-icons-outlined d-block mb-1">download</span>
+      <small>下載</small>
+    </div>
+    <div>
+      <span class="material-icons-outlined d-block mb-1">favorite_border</span>
+      <small>收藏</small>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+    
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
