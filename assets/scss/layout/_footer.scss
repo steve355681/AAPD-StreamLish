@@ -1,4 +1,4 @@
-/* Footer 底色 */ 
+/* Footer 底色 */
 .footer-bg {
   background-color: rgba($tertiary-600, 0.6);
   backdrop-filter: blur(12px);
@@ -6,11 +6,11 @@
   border-radius: 999px;
   border: none;
   box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.25), /* 外陰影 */
-    inset 0.8px -0.1px 0.5px rgba(0, 0, 0, 0.8),    /* 左下陰影 */
-    inset -0.8px 0.1px 0.5px rgba(0, 0, 0, 0.8),    /* 右上陰影 */
-    inset 1.2px 1px 1px rgba(255, 255, 255, 0.3),   /* 左上光影 */
-    inset -0.8px -1px 1px rgba(255, 255, 255, 0.3); /* 右下光影 */
+    0 4px 20px rgba(0, 0, 0, 0.25),
+    inset 0.8px -0.1px 0.5px rgba(0, 0, 0, 0.8),
+    inset -0.8px 0.1px 0.5px rgba(0, 0, 0, 0.8),
+    inset 1.2px 1px 1px rgba(255, 255, 255, 0.3),
+    inset -0.8px -1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .nav-pills {
@@ -24,37 +24,20 @@
     }
 
     .icon {
-      display: inline-block;
       width: 24px;
       height: 24px;
-      background-color: $white; // 預設白色
-      -webkit-mask: no-repeat center / contain;
-      mask: no-repeat center / contain;
-      transition: background-color 0.2s ease-in-out;
+      filter: brightness(0) invert(1); // 預設白色
+      transition: filter 0.2s ease-in-out;
       margin-bottom: 2px;
-    }
-
-    /* 指定 mask 圖檔 */
-    .icon-home {
-      -webkit-mask-image: url("../assets/images/home.svg");
-      mask-image: url("../assets/images/home.svg");
-    }
-    .icon-favorite {
-      -webkit-mask-image: url("../assets/images/favorite.svg");
-      mask-image: url("../assets/images/favorite.svg");
-    }
-    .icon-search {
-      -webkit-mask-image: url("../assets/images/search.svg");
-      mask-image: url("../assets/images/search.svg");
     }
 
     &.active {
       background-color: $tertiary-900;
       color: $white;
 
-      .icon {
-        background-color: $primary-500; // active 時變藍色
-      }
+    .icon {
+      filter: invert(42%) sepia(93%) saturate(3250%) hue-rotate(202deg) brightness(98%) contrast(101%);
+    }
     }
 
     &:focus,
@@ -64,3 +47,72 @@
     }
   }
 }
+
+// 20250831的dev程式碼(後來發現放到github page有異常，修改如上)
+
+// /* Footer 底色 */ 
+// .footer-bg {
+//   background-color: rgba($tertiary-600, 0.6);
+//   backdrop-filter: blur(12px);
+//   -webkit-backdrop-filter: blur(12px);
+//   border-radius: 999px;
+//   border: none;
+//   box-shadow:
+//     0 4px 20px rgba(0, 0, 0, 0.25), /* 外陰影 */
+//     inset 0.8px -0.1px 0.5px rgba(0, 0, 0, 0.8),    /* 左下陰影 */
+//     inset -0.8px 0.1px 0.5px rgba(0, 0, 0, 0.8),    /* 右上陰影 */
+//     inset 1.2px 1px 1px rgba(255, 255, 255, 0.3),   /* 左上光影 */
+//     inset -0.8px -1px 1px rgba(255, 255, 255, 0.3); /* 右下光影 */
+// }
+
+// .nav-pills {
+//   .nav-link {
+//     border-radius: 999px;
+//     transition: all 0.2s ease-in-out;
+//     color: $white;
+
+//     small {
+//       color: $white;
+//     }
+
+//     .icon {
+//       display: inline-block;
+//       width: 24px;
+//       height: 24px;
+//       background-color: $white; // 預設白色
+//       -webkit-mask: no-repeat center / contain;
+//       mask: no-repeat center / contain;
+//       transition: background-color 0.2s ease-in-out;
+//       margin-bottom: 2px;
+//     }
+
+//     /* 指定 mask 圖檔 */
+//     .icon-home {
+//       -webkit-mask-image: url("../assets/images/home.svg");
+//       mask-image: url("../assets/images/home.svg");
+//     }
+//     .icon-favorite {
+//       -webkit-mask-image: url("../assets/images/favorite.svg");
+//       mask-image: url("../assets/images/favorite.svg");
+//     }
+//     .icon-search {
+//       -webkit-mask-image: url("../assets/images/search.svg");
+//       mask-image: url("../assets/images/search.svg");
+//     }
+
+//     &.active {
+//       background-color: $tertiary-900;
+//       color: $white;
+
+//       .icon {
+//         background-color: $primary-500; // active 時變藍色
+//       }
+//     }
+
+//     &:focus,
+//     &:active {
+//       box-shadow: none;
+//       outline: none;
+//     }
+//   }
+// }
