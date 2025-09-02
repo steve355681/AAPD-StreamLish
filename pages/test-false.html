@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>單字測驗</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body class="bg-tertiary-950">
+    <!-- 頁標題 -->
+    <section>
+        <div class="container">
+            <div class="justify-content-center position-relative text-center py-6">
+                <p class="d-inline text-white">1/2</p>
+                <a class="d-inline fs-10 text-white position-absolute end-0 top-50 translate-middle-y" href="word.html">離開</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="liner">
+        <div class="container">
+            <!-- 進度條線 -->
+            <div class="d-flex gap-2 justify-content-center">
+                <div class="underline-box border-top border-2 border-primary-500 w-50 liner h-50"></div>
+                <div class="underline-box w-50 border-top border-2 border-white-50 liner"></div>
+            </div>
+
+            <!-- 測驗區 -->
+            <section>
+                <!-- 單字標題 -->
+                <div class="d-flex flex-column align-items-center justify-content-center test-padding-top">
+                    <h1 class="fs-2 fw-bold text-white mb-6">miraculous</h1>
+                    <div class="d-flex align-items-center mb-10">
+                        <a href="#" class="btn border border-netural-0 rounded-pill d-flex align-items-center text-white py-3 px-5 me-3 fs-11">
+                            <span class="me-1">KK</span>
+                            <span>[mɪˋrækjələs]</span>
+                            <span class="speaker material-symbols-outlined mb-1 ms-1 align-bottom">volume_up</span>
+                        </a>
+                        <a href="#" class="btn border border-netural-0 rounded-pill d-flex align-items-center text-white py-3 px-5 fs-11">
+                            <span class="me-1">KK</span>
+                            <span>[mɪˋrækjələs]</span>
+                            <span class="speaker material-symbols-outlined mb-1 ms-1 align-bottom">volume_up</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 單字題目 -->
+                <div class="test-padding-bottom">
+                    <button type="button" class="btn btn-success-300 w-100 rounded-pill text-white mb-6">a.神奇的,奇蹟般的</button>
+                    <button type="button" class="btn btn-primary-500 w-100 rounded-pill text-white mb-6">a. 補償的</button>
+                    <button type="button" class="btn btn-primary-500 w-100 rounded-pill text-white mb-6">n. 商品、貨物</button>
+                    <button type="button" class="btn btn-primary-500 w-100 rounded-pill text-white">v. 爭論、爭端</button>
+                </div>
+            </section>
+        </div>
+    </section>
+    <script type="module" src="../main.js"></script>
+</body>

@@ -499,7 +499,24 @@ $theme-colors: (
   "netural-300":   $netural-300,
   "netural-200":   $netural-200,
   "netural-100":   $netural-100,
-  "netural-50":    $netural-50
+  "netural-50":    $netural-50,
+
+  "danger-300": $danger-300,
+  "danger-200": $danger-200,
+  "danger-100": $danger-100,
+
+  "success-300": $success-300,
+  "success-200": $success-200,
+  "success-100": $success-100,
+
+  "warning-300": $warning-300,
+  "warning-200": $warning-200,
+  "warning-100": $warning-100,
+
+  "info-300": $info-300,
+  "info-200": $info-200,
+  "info-100": $info-100,
+
 ) !default;
 // scss-docs-end theme-colors-map
 
