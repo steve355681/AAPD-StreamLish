@@ -1,0 +1,29 @@
+/* 預設 tab 樣式 */
+.nav-tabs .nav-link {
+  border: none;
+  border-radius: 0;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+/* 選中狀態：白字、粗體，下方藍色圓角底線 */
+.nav-tabs .nav-link.active {
+  color: #fff !important;
+  font-weight: bold;
+  border-bottom: none; /* 移除預設透明白線，避免跟藍底線重疊 */
+}
+
+.nav-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2.5px;
+  left: 0%;
+  right: 0%;
+  height: 4px;
+  border-radius: 3px;
+  background-color: $primary-500; 
+}
+
+.bottom-padding{
+  padding-bottom: 75px;
+}

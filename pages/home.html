@@ -91,7 +91,7 @@
     </div>
 
     
-    <div class="container">
+    <div class="container bottom-padding">
       <!-- 分類按鈕 -->
       <div class="py-4 mb-8">
         <ul class="nav nav-pills" role="tablist">
@@ -314,13 +314,14 @@
             </div>
           </div>
 
-          <!-- 卡片 -->
+          <!-- 卡片(有加連結) -->
           <div class="card bg-dark text-white border-0 rounded-2 me-5 overflow-hidden" style="width: 90px; flex-shrink: 0;">
             <div class="position-relative mb-1" style="height: 130px;">
-              <img src="../assets/images/dune.jpg" class="w-100 h-100 object-fit-cover" alt="dune">
+              <img src="../assets/images/friends10.png" class="w-100 h-100 object-fit-cover" alt="friends">
             </div>
             <div class="card-body p-0">
-              <span class="fs-10">沙丘</span>
+              <span class="fs-10">六人行</span>
+              <a href="album.html" class="stretched-link"></a>
             </div>
           </div>
 
@@ -410,7 +411,11 @@
 
     </div>
     
-    <%- include('./layout/footer'); -%>
+    
+
+    <div class="container fixed-bottom">
+        <%- include('./layout/footer'); -%>
+    </div>
 
     <script type="module" src="../main.js"></script>
   </body>
