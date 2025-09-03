@@ -1,0 +1,54 @@
+.arrow-down{
+  width: 16px;
+  height: 16px;
+}
+
+ul, li{
+  list-style-type: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.left-nav .btn{
+  width: 72px;
+  height: 32px;
+}
+
+.search{
+  width: 20px;
+  height: 20px;
+}
+
+.edit{
+  width: 20px;
+  height: 20px;
+}
+
+.new-to-old{
+  width: 198px;
+}
+
+.speaker{
+  width: 12px;
+  height: 12px;
+}
+
+.white-20{
+  background-color: rgba($white, 0.2);
+}
+
+.blue-20{
+  background-color: rgba(#3C8AF7, 0.2);
+}
+
+.violet-35{
+  background-color: rgba(#D017E2, 0.35);
+}
+
+.liner{
+    background: linear-gradient(to bottom, rgba(32, 29, 53,1) 0%,rgba(7, 4, 31,1) 100%);
+}
+
+.bottom-padding{
+  padding-bottom: 75px;
+}
