@@ -630,7 +630,7 @@ function renderQuestion(question) {
     
     const button = document.createElement("button");
     button.type = "button";
-    button.classList.add("btn", "btn-primary", "w-100", "rounded-pill", "text-white", "d-flex", "justify-content-center");
+    button.classList.add("btn", "btn-primary", "w-100", "rounded-pill", "text-white", "d-flex", "justify-content-center", "py-5");
     // 預設只顯示英文
     button.innerHTML = `
         <span class="en fs-7">${opt.en}</span>
