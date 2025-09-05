@@ -19,9 +19,9 @@ const questions = [
     kk: "[ləʊn]",
     dj: "[ləʊn]",
     options: [
-      { option: "v. 貸款、借款", correct: false },
+      { option: "v. 貸款、借款", correct: true },
       { option: "n. 一條麵包", correct: false },
-      { option: "n. 土壤", correct: true },
+      { option: "n. 土壤", correct: false },
       { option: "v. 爭論、爭端", correct: false }
     ]
   }
