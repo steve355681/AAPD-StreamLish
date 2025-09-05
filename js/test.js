@@ -131,6 +131,9 @@ function handleAnswer(selectBtn, question) {
       btn.classList.add("btn-success-300");
       btn.innerHTML += `<img src="../assets/images/check.png" alt="check" class="yes align-bottom ms-2">`;
     }
+    else {
+      btn.disabled = true;
+    }
   }
 
   const nextBtn = document.getElementById("next-button");
