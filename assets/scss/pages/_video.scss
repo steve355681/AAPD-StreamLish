@@ -1,0 +1,471 @@
+.video-wrapper {
+  padding-left: 50px;
+}
+
+.video-js {
+  height: 100% !important;
+  padding-top: 0 !important;
+  transition: margin-right 0.5s;
+  .vjs-extra-group {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    padding: map-get($spacers, 3) map-get($spacers, 6);
+    display: flex;
+    width: 100%;
+    transition: opacity 0.6s;
+  }
+  .vjs-extra-group > .vjs-button {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  .vjs-extra-group > .vjs-button .vjs-icon-placeholder::before {
+    font-family: 'Material Symbols Rounded';
+    font-size: map-get($font-sizes, 5);
+    line-height: 1;
+  }
+  .vjs-title {
+    font-size: map-get($font-sizes, 8);
+    font-weight: $font-weight-base;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    margin-right: auto;
+  }
+  .vjs-cast-button {
+    margin-right: map-get($spacers, 8);
+    .vjs-icon-placeholder::before {
+      content: "\e307";
+    }
+  }
+  .vjs-lock-button {
+    margin-right: map-get($spacers, 8);
+    .vjs-icon-placeholder::before {
+      content: "\e898";
+    }
+  }
+  .vjs-back-button {
+    .vjs-icon-placeholder::before {
+      content: "\e5cd";
+    }
+  }
+
+  .vjs-play-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.6s;
+  }
+  .vjs-play-group > .vjs-button {
+    width: 4.8em;
+    height: 4.8em;
+  }
+  .vjs-play-group > .vjs-button .vjs-icon-placeholder::before {
+    font-family: 'Material Symbols Rounded';
+      font-size: map-get($font-sizes, 1);
+      line-height: 1;
+  }
+  .vjs-rewind-button {
+    margin-right: map-get($spacers, 13);
+    .vjs-icon-placeholder::before {
+      content: "\e059";
+    }
+  }
+  .vjs-play-control {
+    margin-right: map-get($spacers, 13);
+    .vjs-icon-placeholder::before {
+      content: "\e037";
+      font-variation-settings: 'FILL' 1;
+    }
+    &.vjs-playing .vjs-icon-placeholder:before {
+      content: "\e034";
+    }
+    &.vjs-ended .vjs-icon-placeholder:before {
+      content: "\e037";
+    }
+  }
+  .vjs-forward-button {
+    width: 4.8em;
+    height: 4.8em;
+    .vjs-icon-placeholder::before {
+      content: "\e056";
+      font-family: 'Material Symbols Rounded';
+      font-size: map-get($font-sizes, 1);
+      line-height: 1;
+    }
+  }
+  
+  .vjs-control-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: auto;
+    padding-left: map-get($spacers, 8);
+    padding-right: map-get($spacers, 8);
+    padding-bottom: map-get($spacers, 8);
+  }
+  .vjs-time-group {
+    display: flex;
+    align-items: center;
+  }
+  .vjs-progress-control {
+    flex: 1 0 auto;
+    .vjs-progress-holder {
+      height: 0.6em;
+      border-radius: 5px;
+      background-color: map-get($tertiarys, "400");
+    }
+    // 移除 load-progress 背景色
+    .vjs-load-progress {
+      background-color: transparent;
+      div {
+        background-color: transparent;
+      }
+    }
+    .vjs-play-progress {
+      border-radius: 5px;
+    }
+    .vjs-play-progress::before {
+      font-size: map-get($font-sizes, 5);
+      line-height: 0.3em;
+      transition: font-size 0.3s;
+    }
+  }
+  .vjs-progress-control:hover .vjs-play-progress::before {
+      font-size: map-get($font-sizes, 3);
+      line-height: 0.35em;
+  }
+  .vjs-remaining-time {
+    font-size: map-get($font-sizes, 9);
+    letter-spacing: 1%;
+    padding: 15px 0;
+    margin-left: map-get($spacers, 6);
+  }
+
+  .vjs-tools-group {
+    display: flex;
+  }
+  .vjs-tools-group .vjs-button {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  .vjs-tools-group .vjs-button .vjs-icon-placeholder::before {
+    font-family: 'Material Symbols Rounded';
+    font-size: map-get($font-sizes, 5);
+    line-height: 1;
+  }
+  .vjs-translate-button {
+    width: 2.4em;
+    height: 2.4em;
+    margin-left: auto;
+    margin-right: map-get($spacers, 5);
+    .vjs-icon-placeholder::before {
+      content: "\e8e2";
+    }
+  }
+  .vjs-mulit-subs-button {
+    margin-right: map-get($spacers, 5);
+    .vjs-icon-placeholder::before {
+      content: "";
+      background: url("/assets/images/subtitles.svg") no-repeat;
+    }
+  }
+  .vjs-comment-button {
+    margin-right: map-get($spacers, 5);
+    .vjs-icon-placeholder::before {
+      content: "\e0b7";
+    }
+  }
+  .vjs-playback-rate {
+    margin-right: map-get($spacers, 5);
+  }
+  .vjs-list-button {
+    margin-right: map-get($spacers, 5);
+    .vjs-icon-placeholder::before {
+      content: "";
+      background: url("/assets/images/more-video.svg") no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .vjs-next-button {
+    margin-right: map-get($spacers, 5);
+    .vjs-icon-placeholder::before {
+      content: "\e044";
+    }
+  }
+
+  .vjs-text-track-display {
+    bottom: 2.4em;
+  }
+  .vjs-text-track-display > div {
+    margin-bottom: 0 !important;
+  }
+  &.vjs-user-inactive.vjs-playing .vjs-text-track-display {
+    bottom: 2.4em;
+  }
+  .vjs-text-track-display .vjs-text-track-cue > div {
+    background-color: transparent !important;
+  }
+
+  .vjs-subtitle {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    font-size: map-get($font-sizes, 6);
+    color: $white;
+    text-align: center;
+    white-space: pre-line;
+    line-height: 1.5;
+    pointer-events: none; /* 不擋影片控制 */
+  }
+}
+
+
+.muti-subs-area {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $tertiary-900;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  width: 332px;
+  padding-right: 50px;
+  transform: translateX(100%);
+  transition: transform .5s;
+  .muti-subs-title {
+    letter-spacing: 0.01em;
+    line-height: 1.375;
+  }
+  .muti-subs-close {
+    cursor: pointer;
+  }
+}
+.subtitle-panel {
+  height: calc(100% - 57px);
+  .subtitle-item {
+    font-size: map-get($font-sizes, 9);
+    font-weight: $font-weight-normal;
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 3);
+    padding-left: map-get($spacers, 6);
+    padding-right: 50px;
+    border-bottom: 1px solid $netural-500;
+    cursor: pointer;
+  }
+  .subtitle-item:hover, .subtitle-item.active {
+    background: linear-gradient(to top, $tertiary-900 8px, rgba($white, .1) 8px)
+  }
+  .subtitle-en {
+    margin-bottom: map-get($spacers, 1);
+  }
+  .subtitle-en .word.highlight {
+    color: $primary-500;
+    font-weight: $font-weight-bold;
+  }
+}
+.subs-panel-open {
+  .vjs-title {
+    visibility: hidden;
+  }
+  .vjs-tools-group {
+    display: none;
+  }
+  .vjs-subtitle {
+    visibility: hidden;
+  }
+  .muti-subs-area {
+    transform: translateX(0);
+  }
+  .video-js {
+    margin-right: 332px;
+  }
+}
+
+// 收藏單字
+.word-define {
+  width: 332px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $tertiary-900;
+  z-index: 1;
+  padding-right: 50px;
+  transform: translateX(100%);
+  transition: transform .6s;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  span.material-symbols-rounded {
+    cursor: pointer;
+  }
+  &-panel {
+    height: calc(100% - 57px);
+  }
+}
+.subs-panel-open.word-define-open .word-define {
+  transform: translateX(0);
+}
+.favorite-icon {
+  transition: color .3s, font-variation-settings .3s;
+}
+.favorite-icon.active {
+  color: $primary-500;
+  font-variation-settings: 'FILL' 1;
+}
+
+.vjs-end-options-group {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  opacity: 0;
+  visibility: hidden;
+  .vjs-button {
+    width: auto;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    letter-spacing: .05rem;
+    line-height: 1.5;
+    border-radius: $border-radius-pill;
+    border: 1px solid rgba($white, .5);
+    background-color: rgba($white, .3);
+    padding: map-get($spacers, 3) map-get($spacers, 6);
+  }
+  .vjs-next-episode-button {
+    margin-left: auto;
+    display: flex;
+    position: relative;
+    .vjs-next-episode-bar {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      border-radius: $border-radius-pill;
+      transition: width 10s linear;
+    }
+    .vjs-next-episode-label {
+      z-index: 1;
+    }
+  }
+  .vjs-quiz-button {
+    margin-left: map-get($spacers, 3);
+    border-color: $primary;
+    background-color: $primary;
+  }
+}
+
+.quiz-wrapper {
+  background: rgba($black, .6);
+  backdrop-filter: blur(20px);
+  padding: 54px 36px 32px 36px;
+  display: none;
+  .quiz-exit-btn {
+    img {
+      width: 20px;
+    }
+  }
+}
+.quiz-open .quiz-wrapper {
+  display: block;
+}
+.quiz-question-wrapper {
+  .quiz-img-text {
+    bottom: 29px;
+  }
+  .quiz-question {
+    margin-left: 54px;
+  }
+  .question-item span.material-symbols-rounded {
+    font-variation-settings: "FILL" 1;
+  }
+  .question-item span.en, .question-item span.zh {
+    letter-spacing: 0.05em;
+  }
+}
+.quiz-open.quiz-end.quiz-end-pos-change {
+  .quiz-exit-btn {
+    position: relative !important;
+    margin-left: auto;
+    margin-right: auto !important;
+    margin-top: 16px !important;
+    display: block;
+  }
+}
+
+// 正片結束
+.video-wrapper.video-end {
+  .vjs-extra-group {
+    visibility: hidden;
+  }
+  .vjs-play-group {
+    display: none;
+  }
+  .vjs-control-bar {
+    display: none;
+  }
+  .vjs-end-options-group {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+// 測驗結束
+.video-wrapper.video-end.quiz-end {
+  .vjs-extra-group {
+    visibility: visible;
+    padding-right: map-get($spacers, 8);
+  }
+  .vjs-title, .vjs-cast-button, .vjs-lock-button {
+    visibility: hidden;
+  }
+  .vjs-end-options-group {
+    .vjs-watch-credits-button {
+      margin-left: auto;
+    }
+    .vjs-next-episode-button {
+      margin-left: map-get($spacers, 3);
+    }
+    .vjs-quiz-button {
+      display: none;
+    }
+  }
+}
+
+.orientation-warning {
+  width: 80%;
+  position: fixed;
+  left: 50%;
+  bottom: -50px;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom .3s, opacity .5s;
+  z-index: 50;
+}
+.orientation-warning.active {
+  bottom: 16px;
+  opacity: 1;
+  visibility: visible;
+}
+.orientation-box {
+  background-color: rgba($white, .9);
+  color: $black;
+  letter-spacing: 0.05em;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform .5s;
+}
+.orientation-warning.active .orientation-box {
+  transform: scale(1);
+}
