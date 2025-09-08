@@ -3,11 +3,13 @@
 @import "../../node_modules/bootstrap";
 
 @import'./utils/base';
+@import'./utils/fonts';
 
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
 @import './pages/home.scss';
+@import './pages/home-member.scss';
 @import './pages/album.scss';
 @import './pages/word.scss';
 @import './pages/word-detail.scss';

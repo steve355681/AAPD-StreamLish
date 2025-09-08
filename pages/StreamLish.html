@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
+    <title>StreamLish</title>
+  </head>
+  <body>
+
+  
+  <!-- Tab 內容區 -->
+  <div class="tab-content">
+
+    <!-- 首頁 -->
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <!-- 首頁 -->
+       <%- include('./layout/home'); -%>
+    </div>
+
+    <!-- 收藏 -->
+    <div class="tab-pane fade" id="word" role="tabpanel" aria-labelledby="word-tab">
+      <!-- word.html -->
+    </div>
+
+    <!-- 搜尋 -->
+    <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
+      <!-- search.html -->
+    </div>
+
+    <!-- 會員 -->
+    <div class="tab-pane fade" id="member" role="tabpanel" aria-labelledby="member-tab">
+      <!-- 會員首頁 -->
+       <%- include('./layout/home-member'); -%>
+    </div>
+
+  </div>
+  <div class="fixed-bottom">
+      <%- include('./layout/footer'); -%>
+  </div>
+
+  <script type="module" src="../main.js"></script>
+  </body>
+</html>
