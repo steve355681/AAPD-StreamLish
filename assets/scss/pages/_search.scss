@@ -1,0 +1,12 @@
+.top-margin{
+  margin-top: 50px;
+}
+
+/* 移除 Bootstrap 預設箭頭 */
+.custom-toggle::after {
+  display: none !important;
+}
+
+.bottom-padding{
+  padding-bottom: 75px;
+}
