@@ -24,6 +24,10 @@
   background-color: $primary-500; 
 }
 
+.custom-toggle::after {
+  display: none !important;
+}
+
 .bottom-padding{
   padding-bottom: 75px;
 }
