@@ -42,3 +42,185 @@ ul, li{
 .bottom-padding{
   padding-bottom: 75px;
 }
+
+.top-nav {
+  .nav-link {
+    border: none;
+    border-bottom-color: rgba($netural-500, 0.5);
+    border-width: 1px;
+    border-bottom-style: solid;
+    color: $netural-400;
+    font-weight: 400;
+}
+
+  .nav-link.active {
+    border: none;
+    border-bottom: 4px solid $primary-500;
+    font-weight: 500;
+    color: white;
+}
+}
+
+.type-nav{
+  .nav-item .nav-link{
+    transition: none;
+  }
+}
+
+.movie-1{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/the danish girl.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-2{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/joker.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-3{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/dune.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-4{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/the falls.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-5{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/maze runner.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-6{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/fantastic beasts.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-7{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/harry potter.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-8{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/the little mermaid.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-9{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/avatar.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-10{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/Miss Peregrine's Home for Peculiar Children.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-11{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/the green mile.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie-12{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/parasite.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.series-1{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/behind her eyes.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.series-2{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/friends.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.series-3{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/squid game 2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.series-4{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/house md.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.series-5{
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/sex education.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.series-6{
+  width: 109px;
+  height: 156px;
+}
