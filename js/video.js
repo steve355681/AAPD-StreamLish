@@ -8,6 +8,24 @@ import videojs from 'video.js';
 import * as bootstrap from "bootstrap";
 
 
+const referrer = document.referrer;
+let lastPath = "";
+
+if (referrer) {
+  const url = new URL(referrer);
+  lastPath = url.pathname.split("/").pop(); // 取最後一段
+
+  // 如果最後是空字串 (例如結尾是 "/")，補上 index.html
+  if (!lastPath) {
+    lastPath = "index.html";
+  }
+  // 如果最後沒有副檔名，也補上 index.html
+  else if (!lastPath.includes(".")) {
+    lastPath = "index.html";
+  }
+}
+
+
 const audio = document.getElementById('myAudio');
 audio.muted = false;
 
@@ -46,8 +64,9 @@ class BackButton extends videojs.getComponent('Button') {
     this.addClass('vjs-back-button');
   }
   handleClick() {
-    // console.log("關閉按鈕被點擊！");
-    window.location.href = 'album.html';
+    // console.log(`關閉按鈕被點擊！ ${lastPath}`);
+    // window.location.href = 'album.html';
+    window.location.href = lastPath;
   }
 }
 
@@ -363,10 +382,10 @@ const mainDuration = 60; // 正片長度
 
 // 偵測時間更新 (影片是否真的停下來)
 player.on('timeupdate', () => {
-  console.log('[DEBUG] 畫面時間 =', player.currentTime());
+  // console.log('[DEBUG] 畫面時間 =', player.currentTime());
   const videoWrapper = document.querySelector(".video-wrapper");
   if (player.currentTime() >= mainDuration) {
-    console.log('正片播完了');
+    // console.log('正片播完了');
     // 顯示三個按鈕
     videoWrapper.classList.add("video-end");
   } else {
@@ -691,7 +710,7 @@ function handleAnswer(selectedLi, question) {
   // 五秒後處理保留邏輯
   setTimeout(() => {
     const title = document.getElementById("quiz-question-title");
-    title.textContent = isCorrect ? "恭喜答對，你已完成測驗" : "你已完成測驗";
+    title.textContent = isCorrect ? "恭喜答對，你已完成測驗" : "很可惜，正確解答是";
     const classesToCheck = ['btn-success', 'btn-danger'];
     allOptions.forEach(li => {
       const button = li.children[0];
