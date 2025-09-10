@@ -5,135 +5,208 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>單字詳解</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
   </head>
   <body class="bg-tertiary-950">
     <!-- 頁標題 -->
     <section>
-        <div class="container">
-            <div class="position-relative py-6 text-white">
-                <span class="material-symbols-outlined align-bottom position-absolute start-0"><a href="StreamLish.html#word">arrow_left_alt</a></span>
-                <p class="text-center">單字詳解</p>
-            </div>
+      <div class="container">
+        <div class="position-relative py-6 text-white">
+          <span
+            class="material-symbols-outlined align-bottom position-absolute start-0"
+            ><a href="StreamLish.html#word">arrow_left_alt</a></span
+          >
+          <p class="text-center">單字詳解</p>
         </div>
+      </div>
     </section>
     <!-- 卡片 -->
-          <section class="mb-8 mt-7">
-                <div class="container">
-                    <div class="card bg-tertiary-900 p-6 rounded-3">
-                      <div class="d-flex align-items-center justify-content-between mb-5">
-                        <h1 class="text-white fs-4 fw-bold">miraculous</h1>
-                        <div>
-                          <button class="btn fs-11 text-white rounded-pill white-20 py-1 px-3">
-                            日常生活
-                          </button>
-                          <button class="btn fs-11 text-white rounded-pill ms-3 blue-20 py-1 px-3">
-                            未掌握
-                          </button>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center mb-5">
-                        <a href="#" class="d-flex align-items-center text-white me-5 fs-11">
-                            <span>KK</span>
-                            <span>[mɪˋrækjələs]</span>
-                            <span class="speaker material-symbols-outlined mb-1 ms-1 align-bottom">volume_up</span>
-                        </a>
-                        <a href="#" class="d-flex align-items-center text-white fs-11">
-                            <span>DJ</span>
-                            <span>[miˋrækjuləs]</span>
-                            <span class="speaker material-symbols-outlined mb-1 ms-1 align-bottom">volume_up</span>
-                        </a>
-                      </div>
-                      <h2 class="text-white fs-10 fw-normal">a.神奇的, 超自然的, 奇蹟般的</h2>
-                    </div>
-                    
+    <section class="mb-8 mt-7">
+      <div class="container">
+        <div class="card bg-tertiary-900 p-6 rounded-3">
+          <div class="d-flex align-items-center justify-content-between mb-5">
+            <h1 class="text-white fs-4 fw-bold">miraculous</h1>
+            <div>
+              <button
+                class="btn fs-11 text-white rounded-pill white-20 py-1 px-3"
+              >
+                日常生活
+              </button>
+              <button
+                class="btn fs-11 text-white rounded-pill ms-3 blue-20 py-1 px-3"
+              >
+                未掌握
+              </button>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-5">
+            <a href="#" class="d-flex align-items-center text-white me-5 fs-11">
+              <span>KK</span>
+              <span>[mɪˋrækjələs]</span>
+              <span
+                class="speaker material-symbols-outlined mb-1 ms-1 align-bottom"
+                >volume_up</span
+              >
+            </a>
+            <a href="#" class="d-flex align-items-center text-white fs-11">
+              <span>DJ</span>
+              <span>[miˋrækjuləs]</span>
+              <span
+                class="speaker material-symbols-outlined mb-1 ms-1 align-bottom"
+                >volume_up</span
+              >
+            </a>
+          </div>
+          <h2 class="text-white fs-10 fw-normal">
+            a.神奇的, 超自然的, 奇蹟般的
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navbar&Tab -->
+    <section>
+      <nav class="bg-tertiary-950">
+        <div class="container">
+          <div
+            class="d-flex justify-content-center border-bottom border-neutral-500"
+          >
+            <!-- 選單按鈕 -->
+            <div class="nav nav-tabs w-100" id="nav-tab" role="tablist">
+              <button
+                class="nav-link active col-6 border-top-0 border-start-0 border-end-0 border-4 border-primary-500 py-6 fs-9 fw-bold text-white"
+                id="nav-video-eg-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-video-eg"
+                type="button"
+                role="tab"
+                aria-controls="nav-video-eg"
+                aria-current="page"
+                aria-expanded="true"
+              >
+                影片例句
+              </button>
+
+              <button
+                class="nav-link border-0 col-6 py-6 text-netural-400 fs-9 fw-normal disabled"
+                id="nav-extend-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-extend"
+                type="button"
+                role="tab"
+                aria-controls="nav-extend"
+                aria-expanded="false"
+              >
+                補充單字/片語
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- 內容 -->
+      <div class="tab-content" id="nav-tabContent">
+        <!-- 影片例句內容 -->
+        <div
+          class="tab-pane fade show active m-0"
+          id="nav-video-eg"
+          role="tabpanel"
+          aria-labelledby="nav-video-eg-tab"
+        >
+          <section class="mt-6">
+            <div class="container">
+              <!-- 例句卡片 -->
+              <div class="card bg-tertiary-900 p-6 rounded-3 mb-8">
+                <div class="pb-5 border-bottom border-netural-500-50 mb-5">
+                  <h3
+                    class="text-white fs-10 border-bottom border-white d-inline"
+                  >
+                    例句
+                  </h3>
+                  <p class="text-white fs-10 mb-5 mt-5">
+                    Something quite
+                    <span class="fw-bold text-primary-500">miraculous</span>
+                    happened.
+                  </p>
+                  <p class="text-white fs-10">發生了一件相當神奇的事情</p>
                 </div>
-          </section>
-
-      <!-- Navbar&Tab -->
-      <section>
-        <nav class="bg-tertiary-950">
-          <div class="container">
-
-            <div class="d-flex justify-content-center border-bottom border-neutral-500">
-              <!-- 選單按鈕 -->
-              <div class="nav nav-tabs w-100" id="nav-tab" role="tablist">
-                <button 
-                class="nav-link active col-6 border-top-0 border-start-0 border-end-0 border-4 border-primary-500 py-6 fs-9 fw-bold text-white" 
-                id="nav-video-eg-tab" data-bs-toggle="tab" data-bs-target="#nav-video-eg" type="button" role="tab" aria-controls="nav-video-eg" aria-current="page" aria-expanded="true">影片例句</button>
-                
-                <button class="nav-link border-0 col-6 py-6 text-netural-400 fs-9 fw-normal disabled" id="nav-extend-tab" data-bs-toggle="tab" data-bs-target="#nav-extend" type="button" role="tab" aria-controls="nav-extend" aria-expanded="false">補充單字/片語</button>
+                <div class="d-flex align-items-center">
+                  <a
+                    href="#"
+                    class="btn white-20 rounded-pill d-flex align-items-center text-white py-3 px-5 me-3 fs-10"
+                  >
+                    聽例句
+                    <span
+                      class="speaker material-symbols-outlined mb-1 ms-1 align-bottom"
+                      >volume_up</span
+                    >
+                  </a>
+                  <a
+                    href="video.html"
+                    class="btn white-20 rounded-pill d-flex align-items-center text-white py-3 px-5 fs-10"
+                  >
+                    看影片(六人行S1 EP1)
+                    <img
+                      src="../assets/images/play.png"
+                      alt="play"
+                      class="ms-1 play"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- 相關單字影片 -->
+              <div class="bottom-padding">
+                <h2 class="fs-6 text-white mb-5">相關單字影片</h2>
+                <div class="d-flex justify-content-center gap-2 flex-wrap">
+                  <a href="#" class="mb-8">
+                    <div class="video-card-1"></div>
+                    <p class="text-white fs-9 mt-1 video-word">
+                      怪物與他的產物
+                    </p>
+                  </a>
+                  <a href="#" class="mb-8">
+                    <div class="video-card-2"></div>
+                    <p class="text-white fs-9 mt-1 video-word">哈利波特</p>
+                  </a>
+                  <a href="#" class="mb-8">
+                    <div class="video-card-3"></div>
+                    <p class="text-white fs-9 mt-1 video-word">怪奇孤兒院</p>
+                  </a>
+                  <a href="#" class="mb-8">
+                    <div class="video-card-4"></div>
+                    <p class="text-white fs-9 mt-1 video-word">瀑布</p>
+                  </a>
+                  <a href="#" class="mb-8">
+                    <div class="video-card-5"></div>
+                    <p class="text-white fs-9 mt-1 video-word">移動迷宮</p>
+                  </a>
+                  <a href="#" class="mb-8">
+                    <div class="video-card-1"></div>
+                    <p class="text-white fs-9 mt-1 video-word">
+                      怪物與他的產物
+                    </p>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
-        <!-- 內容 -->
-          <div class="tab-content" id="nav-tabContent">
-            <!-- 影片例句內容 -->
-            <div class="tab-pane fade show active m-0" id="nav-video-eg" role="tabpanel" aria-labelledby="nav-video-eg-tab">
-              <section class="mt-6">
-                <div class="container">
-                  <!-- 例句卡片 -->
-                  <div class="card bg-tertiary-900 p-6 rounded-3 mb-8">
-                    <div class="pb-5 border-bottom border-netural-500-50 mb-5">
-                      <h3 class="text-white fs-10 border-bottom border-white d-inline">例句</h3>
-                      <p class="text-white fs-10 mb-5 mt-5">Something quite <span class="fw-bold text-primary-500">miraculous</span> happened.</p>
-                      <p class="text-white fs-10">發生了一件相當神奇的事情</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="btn white-20 rounded-pill d-flex align-items-center text-white py-3 px-5 me-3 fs-10">
-                            聽例句
-                            <span class="speaker material-symbols-outlined mb-1 ms-1 align-bottom">volume_up</span>
-                        </a>
-                        <a href="video.html" class="btn white-20 rounded-pill d-flex align-items-center text-white py-3 px-5 fs-10">
-                            看影片(六人行S1 EP1)
-                            <img src="../assets/images/play.png" alt="play" class="ms-1">
-                        </a>
-                  </div>
-                  </div>
-                  <!-- 相關單字影片 -->
-                  <div class="bottom-padding">
-                    <h2 class="fs-6 text-white mb-5">相關單字影片</h2>
-                    <div class="d-flex justify-content-center gap-2 flex-wrap">
-                        <a href="#" class="mb-8">
-                          <div class="video-card-1"></div>
-                          <p class="text-white fs-9 mt-1 video-word">怪物與他的產物</p>
-                        </a>
-                        <a href="#" class="mb-8">
-                          <div class="video-card-2"></div>
-                          <p class="text-white fs-9 mt-1 video-word">哈利波特</p>
-                        </a>
-                        <a href="#" class="mb-8">
-                          <div class="video-card-3"></div>
-                          <p class="text-white fs-9 mt-1 video-word">怪奇孤兒院</p>
-                        </a>
-                        <a href="#" class="mb-8">
-                          <div class="video-card-4"></div>
-                          <p class="text-white fs-9 mt-1 video-word">瀑布</p>
-                        </a>
-                        <a href="#" class="mb-8">
-                          <div class="video-card-5"></div>
-                          <p class="text-white fs-9 mt-1 video-word">移動迷宮</p>
-                        </a>
-                        <a href="#" class="mb-8">
-                          <div class="video-card-1"></div>
-                          <p class="text-white fs-9 mt-1 video-word">怪物與他的產物</p>
-                        </a>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <!-- 補充單字/片語內容 -->
-            <div class="tab-pane fade " id="nav-extend" role="tabpanel" aria-labelledby="nav-extend-tab">
-            </div>
-          </div>
-      </section>
-
-      <div class="container fixed-bottom">
-        <%- include('./layout/footer'); -%>
+          </section>
+        </div>
+        <!-- 補充單字/片語內容 -->
+        <div
+          class="tab-pane fade"
+          id="nav-extend"
+          role="tabpanel"
+          aria-labelledby="nav-extend-tab"
+        ></div>
       </div>
-      
+    </section>
+
+    <div class="container fixed-bottom">
+      <%- include('./layout/footer'); -%>
+    </div>
+
     <script type="module" src="../js/word-detail.js"></script>
   </body>
 </html>
