@@ -29,15 +29,23 @@ if (referrer) {
 const audio = document.getElementById('myAudio');
 audio.muted = false;
 
+let chooseSub = "zh";
+let prevSub = "zh";
 
-class TitleComponent extends videojs.getComponent('Component') {
+
+const vjsComponent = videojs.getComponent('Component');
+const vjsButton = videojs.getComponent('Button');
+const vjsMenuButton = videojs.getComponent('MenuButton');
+const vjsMenuItem = videojs.getComponent('MenuItem');
+
+class TitleComponent extends vjsComponent {
   constructor(player, options) {
     super(player, options);
     this.el().classList.add('vjs-title');
     this.el().innerHTML = options.text || '影片標題';
   }
 }
-class CastButton extends videojs.getComponent('Button') {
+class CastButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('倒退10秒');
@@ -47,7 +55,7 @@ class CastButton extends videojs.getComponent('Button') {
     console.log("Cast 按鈕被點擊！");
   }
 }
-class LockButton extends videojs.getComponent('Button') {
+class LockButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('倒退10秒');
@@ -57,7 +65,7 @@ class LockButton extends videojs.getComponent('Button') {
     console.log("Lock 按鈕被點擊！");
   }
 }
-class BackButton extends videojs.getComponent('Button') {
+class BackButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('關閉影片');
@@ -70,7 +78,7 @@ class BackButton extends videojs.getComponent('Button') {
   }
 }
 
-class RewindButton extends videojs.getComponent('Button') {
+class RewindButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('倒退10秒');
@@ -81,7 +89,7 @@ class RewindButton extends videojs.getComponent('Button') {
     this.player().currentTime(Math.max(0, current - 10));
   }
 }
-class ForwardButton extends videojs.getComponent('Button') {
+class ForwardButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('快進10秒');
@@ -93,7 +101,7 @@ class ForwardButton extends videojs.getComponent('Button') {
   }
 }
 
-class RemainingTime extends videojs.getComponent('Component') {
+class RemainingTime extends vjsComponent {
   constructor(player, options) {
     super(player, options);
     this.el().classList.add('vjs-remaining-time');
@@ -109,7 +117,7 @@ class RemainingTime extends videojs.getComponent('Component') {
   }
 }
 
-class TranslateButton extends videojs.getComponent('Button') {
+class TranslateButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('翻譯');
@@ -121,17 +129,48 @@ class TranslateButton extends videojs.getComponent('Button') {
     videoWrapper.classList.add("subs-panel-open");
   }
 }
-class MultiSubsButton extends videojs.getComponent('Button') {
+class MultiSubsButton extends vjsMenuButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('字幕');
     this.addClass('vjs-mulit-subs-button');
   }
-  handleClick() {
-    console.log("字幕按鈕被點擊！");
+  // 建立選單內容
+  createItems() {
+    const items = [];
+    const labels = [
+      { name:'中文', sub:'zh' },
+      { name:'英文', sub:'en' },
+      { name:'Off', sub:'' }
+    ];
+    labels.forEach(label => {      
+      const item = new vjsMenuItem(this.player_, {
+        label: label.name,
+        selectable: true,
+        multiSelectable: false
+      });
+
+      item.handleClick = function() {
+        items.forEach(i => i.selected(false)); // 全部取消
+        item.selected(true);                   // 自己打勾
+        chooseSub = label.sub;
+        player.getChild('Subtitle').update();
+        // console.log(`切換字幕: ${label.name}`);
+      }
+
+      items.push(item);
+    });
+
+    // 預設 "中文" 被選中
+    items[0].selected(true);
+
+    return items;
   }
+  // handleClick() {
+  //   console.log("字幕按鈕被點擊！");
+  // }
 }
-class CommentButton extends videojs.getComponent('Button') {
+class CommentButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('留言');
@@ -141,7 +180,7 @@ class CommentButton extends videojs.getComponent('Button') {
     console.log("留言按鈕被點擊！");
   }
 }
-class ListButton extends videojs.getComponent('Button') {
+class ListButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('影集清單');
@@ -151,7 +190,7 @@ class ListButton extends videojs.getComponent('Button') {
     console.log("影集清單按鈕被點擊！");
   }
 }
-class NextButton extends videojs.getComponent('Button') {
+class NextButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('下一集');
@@ -162,7 +201,7 @@ class NextButton extends videojs.getComponent('Button') {
   }
 }
 
-class WatchCreditsButton extends videojs.getComponent('Button') {
+class WatchCreditsButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('觀看片尾');
@@ -173,7 +212,7 @@ class WatchCreditsButton extends videojs.getComponent('Button') {
     console.log("觀看片尾按鈕被點擊！");
   }
 }
-class NextEpisodeButton extends videojs.getComponent('Button') {
+class NextEpisodeButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('下一集');
@@ -209,7 +248,7 @@ class NextEpisodeButton extends videojs.getComponent('Button') {
     }, interval);
   }
 }
-class QuizButton extends videojs.getComponent('Button') {
+class QuizButton extends vjsButton {
   constructor(player, options) {
     super(player, options);
     this.controlText('課後測驗');
@@ -248,7 +287,7 @@ videojs.registerComponent('WatchCreditsButton', WatchCreditsButton);
 videojs.registerComponent('NextEpisodeButton', NextEpisodeButton);
 videojs.registerComponent('QuizButton', QuizButton);
 
-class ExtraGroup extends videojs.getComponent('Component') {
+class ExtraGroup extends vjsComponent {
   constructor(player, options) {
     super(player, options);
     this.el().classList.add('vjs-extra-group');
@@ -259,7 +298,7 @@ class ExtraGroup extends videojs.getComponent('Component') {
     this.addChild('BackButton');
   }
 }
-class PlayGroup extends videojs.getComponent('Component') {
+class PlayGroup extends vjsComponent {
   constructor(player, options) {
     super(player, options);
     this.el().classList.add('vjs-play-group');
@@ -269,7 +308,7 @@ class PlayGroup extends videojs.getComponent('Component') {
     this.addChild('ForwardButton');
   }
 }
-class TimeGroup extends videojs.getComponent('Component') {
+class TimeGroup extends vjsComponent {
   constructor(player, options) {
     super(player, options);
     this.el().classList.add('vjs-time-group');
@@ -278,7 +317,7 @@ class TimeGroup extends videojs.getComponent('Component') {
     this.addChild('RemainingTime');
   }
 }
-class ToolsGroup extends videojs.getComponent('Component') {
+class ToolsGroup extends vjsComponent {
   constructor(player, options) {
     super(player, options);
     this.el().classList.add('vjs-tools-group');
@@ -291,7 +330,7 @@ class ToolsGroup extends videojs.getComponent('Component') {
     this.addChild('NextButton');
   }
 }
-class EndScreenOptionsGroup extends videojs.getComponent('Component') {
+class EndScreenOptionsGroup extends vjsComponent {
   constructor(player, options) {
     super(player, options);
     this.el().classList.add('vjs-end-options-group');
@@ -302,12 +341,11 @@ class EndScreenOptionsGroup extends videojs.getComponent('Component') {
   }
 }
 
-class Subtitle extends videojs.getComponent('Component') {
+class Subtitle extends vjsComponent {
   constructor(player, options) {
     super(player, options);
     this.el().classList.add('vjs-subtitle');
     player.on('timeupdate', () => this.update());
-    // player.on('loadedmetadata', () => this.update());
   }
 
   update() {
@@ -315,9 +353,14 @@ class Subtitle extends videojs.getComponent('Component') {
       const currentTime = player.currentTime();
       // 找到當前應顯示的字幕
       const idx = subtitles.findIndex(sub => currentTime >= sub.start && currentTime <= sub.end);
-      if (idx !== -1 && idx !== currentIndex) {
+      if ((idx !== -1 && idx !== currentIndex) || (prevSub !== chooseSub)) {
         // 更新字幕文字
-        this.el().textContent = subtitles[idx].zh; // 或選擇顯示 zh / en
+        if(chooseSub) {
+          this.el().textContent = subtitles[idx][chooseSub]; // 或選擇顯示 zh / en
+        } else {
+          this.el().textContent = "";
+        }
+        prevSub !== chooseSub ? prevSub = chooseSub : null;
         currentIndex = idx;
       }
       // 沒有字幕時清空

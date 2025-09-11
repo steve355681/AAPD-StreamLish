@@ -179,6 +179,15 @@
   }
   .vjs-playback-rate {
     margin-right: map-get($spacers, 5);
+    .vjs-playback-rate-value {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .vjs-menu-item {
+      font-size: 14px;
+      line-height: 1.2;
+      padding: 4px 0;
+    }
   }
   .vjs-list-button {
     margin-right: map-get($spacers, 5);
@@ -368,6 +377,7 @@
   background: rgba($black, .6);
   backdrop-filter: blur(20px);
   padding: 54px 36px 32px 36px;
+  transition: padding .6s;
   display: none;
   .quiz-exit-btn {
     img {
@@ -393,12 +403,18 @@
   }
 }
 .quiz-open.quiz-end.quiz-end-pos-change {
+  .quiz-wrapper {
+    padding: 67px 36px 68px 36px;
+  }
   .quiz-exit-btn {
     position: relative !important;
     margin-left: auto;
     margin-right: auto !important;
     margin-top: 16px !important;
     display: block;
+  }
+  .quiz-img-text {
+    opacity: 0;
   }
 }
 
