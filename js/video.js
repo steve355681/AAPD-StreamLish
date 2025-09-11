@@ -346,6 +346,7 @@ class Subtitle extends vjsComponent {
     super(player, options);
     this.el().classList.add('vjs-subtitle');
     player.on('timeupdate', () => this.update());
+    player.on('loadedmetadata', () => this.update());
   }
 
   update() {
