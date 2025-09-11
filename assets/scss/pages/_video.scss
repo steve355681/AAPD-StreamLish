@@ -170,6 +170,9 @@
       content: "";
       background: url("/assets/images/subtitles.svg") no-repeat;
     }
+    .vjs-menu .vjs-menu-content {
+      bottom: 1em;
+    }
   }
   .vjs-comment-button {
     margin-right: map-get($spacers, 5);
@@ -182,6 +185,9 @@
     .vjs-playback-rate-value {
       font-size: 16px;
       line-height: 1.5;
+    }
+    .vjs-menu .vjs-menu-content {
+      bottom: .8em;
     }
     .vjs-menu-item {
       font-size: 14px;
