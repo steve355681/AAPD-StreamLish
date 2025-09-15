@@ -34,6 +34,9 @@ const questionResult = {
   wrongCount: 0
 };
 
+import checkImg from '../assets/images/check.png';
+import wrongImg from '../assets/images/wrong.png';
+
 window.addEventListener("load", loadQuestion);
 
 function loadQuestion() {
@@ -117,19 +120,19 @@ function handleAnswer(selectBtn, question) {
         questionResult.correctCount++;
         btn.classList.remove("btn-primary-500");
         btn.classList.add("btn-success-300");
-        btn.innerHTML += `<img src="../assets/images/check.png" alt="check" class="yes align-bottom ms-2">`;
+        btn.innerHTML += `<img src="${checkImg}" alt="check" class="yes align-bottom ms-2">`;
       } else {
         // 選錯
         questionResult.wrongCount++;
         btn.classList.remove("btn-primary-500");
         btn.classList.add("btn-danger-300");
-        btn.innerHTML += `<img src="../assets/images/wrong.png" alt="wrong" class="no align-bottom ms-2">`;
+        btn.innerHTML += `<img src="${wrongImg}" alt="wrong" class="no align-bottom ms-2">`;
       }
     } else if (option.correct) {
       // 顯示正確答案
       btn.classList.remove("btn-primary-500");
       btn.classList.add("btn-success-300");
-      btn.innerHTML += `<img src="../assets/images/check.png" alt="check" class="yes align-bottom ms-2">`;
+      btn.innerHTML += `<img src="${checkImg}" alt="check" class="yes align-bottom ms-2">`;
     }
     else {
       btn.disabled = true;

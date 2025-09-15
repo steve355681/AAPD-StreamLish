@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import { fileURLToPath } from 'node:url';
+import fs from 'fs';
 import path from 'node:path';
 import { glob } from 'glob';
 
@@ -30,6 +31,14 @@ export default defineConfig({
     liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html']),
     ViteEjsPlugin(),
     moveOutputPlugin(),
+    {
+      name: 'add-nojekyll',
+      closeBundle() {
+        const file = path.resolve(__dirname, 'dist/.nojekyll');
+        fs.writeFileSync(file, '');
+        console.log('✅ 已建立 .nojekyll，避免 GitHub Pages 忽略底線檔案');
+      }
+    }
   ],
   server: {
     // 啟動 server 時預設開啟的頁面
