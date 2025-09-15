@@ -16,21 +16,20 @@
   background-color: #fff;
 }
 
-
-/* 黑色漸層遮罩 */
 .carousel-gradient {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60%; /* 控制漸層範圍 */
-  background: linear-gradient(to bottom,
-    rgba(0,0,0,0) 0%,     /* 上面完全透明 */
-    rgba(0,0,0,0.6) 20%,  /* 中段已經開始變暗 */
-    rgba(0,0,0,1) 60%, /* 更黑 */
-    rgba(0,0,0,1) 100%    /* 最底部全黑 */
-   );
+  height: 50%; /* 建議縮小漸層範圍，避免過大 */
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 4, 31, 0) 0%,       /* 頂端完全透明 */
+    rgba(7, 4, 31, 0.75) 70%,   /* 中下段 75% 不透明度 */
+    rgba(7, 4, 31, 1) 100%      /* 最底部完全不透明 */
+  );
 }
+
 
 .carousel-gradient-card {
   position: absolute;
@@ -42,6 +41,10 @@
     rgba(0,0,0,0) 0%,     /* 上面完全透明 */
     rgba(0,0,0,1) 100%    /* 最底部全黑 */
    );
+}
+
+.bg-card{
+  background-color: $gray-900;
 }
 
 .nav-pills .nav-link {
@@ -81,4 +84,12 @@
 .overflow-auto {
   -ms-overflow-style: none;  /* IE, Edge */
   scrollbar-width: none;     /* Firefox */
+}
+
+.bottom-padding{
+  padding-bottom: 75px;
+}
+
+.right-padding{
+  padding-right: 0px;
 }

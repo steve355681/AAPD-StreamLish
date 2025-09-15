@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display">
-    <title>album</title>
+    <title>影片資訊-集數</title>
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-black">
 
   <!-- 預覽圖片  -->
-  <div class="card bg-dark border-0 rounded-2 overflow-hidden">
+  <div class="card bg-dark border-0 rounded-2 overflow-hidden mb-8">
     <div class="position-relative">
       <!-- 圖片 -->
       <img src="../assets/images/friends9.png" class="w-100 h-100 object-fit-cover" alt="friends9">
@@ -26,7 +26,9 @@
       <!-- 右上角：投放 & 關閉 -->
       <div class="position-absolute top-0 end-0 mt-5 me-6 d-flex gap-2">
         <span class="material-icons-outlined text-white bg-dark bg-opacity-50 rounded-circle p-1">cast</span>
-        <span class="material-icons-outlined text-white bg-dark bg-opacity-50 rounded-circle p-1">close</span>
+        <a href="StreamLish.html" class="text-white text-decoration-none">
+          <span class="material-icons-outlined text-white bg-dark bg-opacity-50 rounded-circle p-1">close</span>
+        </a>
       </div>
 
       <!-- 右下角：音量 -->
@@ -36,45 +38,369 @@
     </div>
   </div>
 
-  <div>
-    <h5>EP1 摩妮卡有新室友</h1>
-    <p>蕾秋在婚禮當天前離開未婚夫，搬進去和摩妮卡同住，卻發現沒老爸的信用卡借後盾，自力更生其實比想像中困難。</p>
-  </div>
-
-  <div class="card bg-dark text-white border-0 p-3 rounded-3">
-  <!-- 標題與副標 -->
-  <h6 class="fw-bold mb-1">EP1 摩妮卡有新室友</h6>
-  <p class="small text-secondary mb-3">
-    蕾秋在婚禮當天前離開未婚夫，搬進去和摩妮卡同住，卻發現沒老爸的信用卡借後盾，自力更生其實比想像中困難。
-  </p>
-
-  <!-- 主播放按鈕 -->
-  <div class="d-grid mb-3">
-    <button class="btn btn-primary rounded-pill fw-bold">
-      <span class="material-icons-outlined align-middle me-1">play_arrow</span>
-      播放・第一季 EP1
-    </button>
-  </div>
-
-  <!-- 下方三個操作 -->
-  <div class="d-flex justify-content-around text-center">
-    <div>
-      <span class="material-icons-outlined d-block mb-1">share</span>
-      <small>分享</small>
+  <div class="container bottom-padding">
+    <!-- 劇名與資訊 -->
+    <div class="mb-8">
+      <div class="d-flex align-items-center mb-1">
+        <h4 class="fw-bold mb-2 text-white fs-5">六人行</h4>
+        <img class="ms-3" src="../assets/images/13+.png" alt="13+" height="24">
+      </div>
+      
+      <div class="d-flex align-items-center mb-3 text-netural-400 fs-10">
+        <span class="material-icons-outlined me-1 small">star</span>
+        <p>95%</p>
+        <img class="mx-2" src="../assets/images/Div.png" alt="div" height="4">
+        <p>1994</p>
+        <img class="mx-2" src="../assets/images/Div.png" alt="div" height="4">
+        <p>喜劇</p>
+      </div>
+  
+      <!-- 功能徽章 -->
+      <div class="d-flex flex-wrap gap-3 mb-4">
+        <img src="../assets/images/CC.png" alt="CC" height="24">
+        <img src="../assets/images/Dolby.png" alt="Dolby Vision" height="24">
+        <img src="../assets/images/4K.png" alt="4K" height="24">
+        <img src="../assets/images/AD.png" alt="AD" height="24">
+      </div>
     </div>
-    <div>
-      <span class="material-icons-outlined d-block mb-1">download</span>
-      <small>下載</small>
+  
+    <!-- 劇集描述 + 操作卡片 -->
+    <div class="mb-8">
+      <h6 class="fw-semibold mb-5 text-white fs-6">EP1 摩妮卡有新室友</h6>
+      <p class="small fw-light text-netural-400">
+        蕾秋在婚禮當天前離開未婚夫，搬進去和摩妮卡同住，卻發現沒老爸的信用卡借後盾，自力更生其實比想像中困難。
+      </p>  
     </div>
-    <div>
-      <span class="material-icons-outlined d-block mb-1">favorite_border</span>
-      <small>收藏</small>
+
+    <!-- 主播放按鈕 -->
+    <div class="d-grid mb-6">
+      <button class="btn btn-primary rounded-pill text-white" style="height: 50px" onclick="location.href='video.html'">
+        <img class="me-1 mb-1" src="../assets/images/Arrow right.png" alt="Arrow right">
+        播放・第一季 EP1
+      </button>
     </div>
+
+
+    <!-- 按鈕 -->
+    <div class="d-flex justify-content-around mb-8">
+      <!-- 分享 -->
+      <button type="button" class="btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center px-6">
+        <img src="../assets/images/share.svg" alt="分享" width="20" height="20">
+        <small class="mt-1 fw-light fs-10">分享</small>
+      </button>
+
+      <!-- 下載 -->
+      <button type="button" class="btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center px-6">
+        <img src="../assets/images/download.svg" alt="下載" width="20" height="20">
+        <small class="mt-1 fw-light fs-10">下載</small>
+      </button>
+
+      <!-- 收藏 -->
+      <button type="button" class="btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center px-6">
+        <img src="../assets/images/heart.svg" alt="收藏" width="20" height="20">
+        <small class="mt-1 fw-light fs-10">收藏</small>
+      </button>
+    </div>
+
+    <!-- 選單按鈕 -->
+    <div class="justify-content-start overflow-auto mb-8">
+      <div class="nav nav-tabs flex-nowrap w-100" id="nav-tab" role="tablist">
+        <button 
+          class="nav-link flex-shrink-0 text-netural-400 border-bottom border-netural-500 fw-light active" 
+          id="nav-vocab-tab" data-bs-toggle="tab" data-bs-target="#nav-vocab" 
+          type="button" role="tab" aria-controls="nav-vocab" aria-selected="true">
+          集數
+        </button>
+
+        <button 
+          class="nav-link flex-shrink-0 text-netural-400 border-bottom border-netural-500 fw-light" 
+          id="nav-detail-tab" data-bs-toggle="tab" data-bs-target="#nav-detail" 
+          type="button" role="tab" aria-controls="nav-detail" aria-selected="false">
+          詳情
+        </button>
+
+        <button 
+          class="nav-link flex-shrink-0 text-netural-400 border-bottom border-netural-500 fw-light" 
+          id="nav-detail-tab" data-bs-toggle="tab" data-bs-target="#nav-detail" 
+          type="button" role="tab" aria-controls="nav-detail" aria-selected="false">
+          本劇金句
+        </button>
+
+        <button 
+          class="nav-link flex-shrink-0 text-netural-400 border-bottom border-netural-500 fw-light" 
+          id="nav-detail-tab" data-bs-toggle="tab" data-bs-target="#nav-detail" 
+          type="button" role="tab" aria-controls="nav-detail" aria-selected="false">
+          你可能喜歡
+        </button>
+
+        <button 
+          class="nav-link flex-shrink-0 text-netural-400 border-bottom border-netural-500 fw-light" 
+          id="nav-detail-tab" data-bs-toggle="tab" data-bs-target="#nav-detail" 
+          type="button" role="tab" aria-controls="nav-detail" aria-selected="false">
+          留言
+        </button>
+      </div>
+    </div>
+
+    <!-- 操作列：季數下拉 + 下載全部） -->
+    <section>
+      <div class="container-fluid p-0">
+        <div class="d-flex align-items-center justify-content-between">
+
+          <!-- 左：Bootstrap Dropdown -->
+          <div class="dropdown">
+            <!-- Bootstrap 自帶箭頭的 dropdown-toggle -->
+            <button class="btn dropdown-toggle text-white fw-normal fs-9 border-0 bg-transparent p-0 fw-light custom-toggle"
+                    type="button" id="seasonDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              第一季
+            </button>
+            <img src="../assets/images/down.png" alt="dropdown" width="20" height="20">
+            <ul class="dropdown-menu bg-black" aria-labelledby="seasonDropdown">
+              <!-- <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第一季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第二季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第三季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第四季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第五季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第六季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第七季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第八季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第九季</a></li>
+              <li><a class="dropdown-item text-white fs-9 fw-light" href="#">第十季</a></li> -->
+            </ul>
+          </div>
+          <!-- 右：下載全部 -->
+          <a href="#"
+            class="download-btn btn btn-link text-white d-inline-flex align-items-center gap-2 px-0 text-decoration-none"
+            aria-label="下載全部">
+            <img src="../assets/images/download.svg" alt="" class="icon">
+            <span class="fw-light fs-9">下載全部</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+     <!-- 卡片內容 -->
+    <section>
+
+      <!-- 卡片1 -->
+      <div class="d-flex flex-column py-6">
+        <div class="d-flex text-white mb-1">
+          <!-- 左邊：縮圖 + 播放 icon -->
+          <div class="episode-thumb position-relative flex-shrink-0" style="width: 164px; height: 98px;">
+            <img src="../assets/images/friends1.png" class="w-100 h-100 object-fit-cover" alt="friends">
+            <!-- 播放按鈕 -->
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
+            </div>
+          </div>
+  
+          <!-- 右邊：內容 -->
+          <div class="d-flex flex-column justify-content-center ms-5 text-white">
+            <!-- 上：標題 + 下載 -->
+            <small class="mb-1 fw-light">EP1</small>
+            <h6 class="mb-1 fs-8 fw-light">摩妮卡有新室友</h6>
+            <small class="text-netural-400 fs-10 fw-light">20 分</small>
+          </div>
+          <!-- 右邊：下載按鈕 -->
+          <img src="../assets/images/download.svg" alt="下載" class="ms-auto" style="width: 24px;" >
+        </div>
+        <!-- 下：描述 -->
+        <p class="mb-0 mt-2 text-netural-400 fs-10 fw-light">
+            蕾秋在婚禮當天前離開未婚夫，搬進去和摩妮卡同住，卻發現沒老爸的信用卡當後盾，自力更生其實比想像中困難。
+        </p>
+      </div>
+
+      <!-- 卡片2 -->
+      <div class="d-flex flex-column py-6">
+        <div class="d-flex text-white mb-1">
+          <!-- 左邊：縮圖 + 播放 icon -->
+          <div class="episode-thumb position-relative flex-shrink-0" style="width: 164px; height: 98px;">
+            <img src="../assets/images/friends2.png" class="w-100 h-100 object-fit-cover" alt="friends">
+            <!-- 播放按鈕 -->
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
+            </div>
+          </div>
+  
+          <!-- 右邊：內容 -->
+          <div class="d-flex flex-column justify-content-center ms-5 text-white">
+            <!-- 上：標題 + 下載 -->
+            <small class="mb-1">EP2</small>
+            <h6 class="mb-1 fs-8 fw-light">以超音波檢查作結</h6>
+            <small class="text-netural-400 fs-10 fw-light">20 分</small>
+          </div>
+          <!-- 右邊：下載按鈕 -->
+          <img src="../assets/images/download.svg" alt="下載" class="ms-auto" style="width: 24px;" >
+        </div>
+        <!-- 下：描述 -->
+        <p class="mb-0 mt-2 text-netural-400 fs-10 fw-light">
+            羅斯的女同志前妻懷了她的小孩，羅斯卻不喜歡她給小孩取的姓。
+        </p>
+      </div>
+
+      <!-- 卡片3 -->
+      <div class="d-flex flex-column py-6">
+        <div class="d-flex text-white mb-1">
+          <!-- 左邊：縮圖 + 播放 icon -->
+          <div class="episode-thumb position-relative flex-shrink-0" style="width: 164px; height: 98px;">
+            <img src="../assets/images/friends3.png" class="w-100 h-100 object-fit-cover" alt="friends">
+            <!-- 播放按鈕 -->
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
+            </div>
+          </div>
+  
+          <!-- 右邊：內容 -->
+          <div class="d-flex flex-column justify-content-center ms-5 text-white">
+            <!-- 上：標題 + 下載 -->
+            <small class="mb-1">EP3</small>
+            <h6 class="mb-1 fs-8 fw-light">拇指</h6>
+            <small class="text-netural-400 fs-10 fw-light">20 分</small>
+          </div>
+          <!-- 右邊：下載按鈕 -->
+          <img src="../assets/images/download.svg" alt="下載" class="ms-auto" style="width: 24px;" >
+        </div>
+        <!-- 下：描述 -->
+        <p class="mb-0 mt-2 text-netural-400 fs-10 fw-light">
+            菲碧在汽水罐裡發現一隻斷指，於是得到汽水公司給的七千元賠償，錢德勒的菸癮又犯了，惹得眾人不開心。
+        </p>
+      </div>
+
+      <!-- 卡片4 -->
+      <div class="d-flex flex-column py-6">
+        <div class="d-flex text-white mb-1">
+          <!-- 左邊：縮圖 + 播放 icon -->
+          <div class="episode-thumb position-relative flex-shrink-0" style="width: 164px; height: 98px;">
+            <img src="../assets/images/friends4.png" class="w-100 h-100 object-fit-cover" alt="friends">
+            <!-- 播放按鈕 -->
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
+            </div>
+          </div>
+  
+          <!-- 右邊：內容 -->
+          <div class="d-flex flex-column justify-content-center ms-5 text-white">
+            <!-- 上：標題 + 下載 -->
+            <small class="mb-1">EP4</small>
+            <h6 class="mb-1 fs-8 fw-light">喬治史蒂芬羅伯斯</h6>
+            <small class="text-netural-400 fs-10 fw-light">20 分</small>
+          </div>
+          <!-- 右邊：下載按鈕 -->
+          <img src="../assets/images/download.svg" alt="下載" class="ms-auto" style="width: 24px;" >
+        </div>
+        <!-- 下：描述 -->
+        <p class="mb-0 mt-2 text-netural-400 fs-10 fw-light">
+            女孩們發現白宮前顧問喬治史蒂芬羅伯斯就住在對街，決定用望遠鏡一探究竟。
+        </p>
+      </div>
+
+      <!-- 卡片5 -->
+      <div class="d-flex flex-column py-6">
+        <div class="d-flex text-white mb-1">
+          <!-- 左邊：縮圖 + 播放 icon -->
+          <div class="episode-thumb position-relative flex-shrink-0" style="width: 164px; height: 98px;">
+            <img src="../assets/images/friends7.png" class="w-100 h-100 object-fit-cover" alt="friends">
+            <!-- 播放按鈕 -->
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
+            </div>
+          </div>
+  
+          <!-- 右邊：內容 -->
+          <div class="d-flex flex-column justify-content-center ms-5 text-white">
+            <!-- 上：標題 + 下載 -->
+            <small class="mb-1">EP5</small>
+            <h6 class="mb-1 fs-8 fw-light">東德國洗衣粉</h6>
+            <small class="text-netural-400 fs-10 fw-light">20 分</small>
+          </div>
+          <!-- 右邊：下載按鈕 -->
+          <img src="../assets/images/download.svg" alt="下載" class="ms-auto" style="width: 24px;" >
+        </div>
+        <!-- 下：描述 -->
+        <p class="mb-0 mt-2 text-netural-400 fs-10 fw-light">
+            羅斯幫蕾秋洗衣服，並且認為這就是兩人的約會初體驗。喬伊要摩妮卡擔任他的新女友。
+        </p>
+      </div>
+
+      <!-- 卡片6 -->
+      <div class="d-flex flex-column py-6">
+        <div class="d-flex text-white mb-1">
+          <!-- 左邊：縮圖 + 播放 icon -->
+          <div class="episode-thumb position-relative flex-shrink-0" style="width: 164px; height: 98px;">
+            <img src="../assets/images/friends5.png" class="w-100 h-100 object-fit-cover" alt="friends">
+            <!-- 播放按鈕 -->
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
+            </div>
+          </div>
+  
+          <!-- 右邊：內容 -->
+          <div class="d-flex flex-column justify-content-center ms-5 text-white">
+            <!-- 上：標題 + 下載 -->
+            <small class="mb-1">EP6</small>
+            <h6 class="mb-1 fs-8 fw-light">屁股</h6>
+            <small class="text-netural-400 fs-10 fw-light">19 分</small>
+          </div>
+          <!-- 右邊：下載按鈕 -->
+          <img src="../assets/images/download.svg" alt="下載" class="ms-auto" style="width: 24px;" >
+        </div>
+        <!-- 下：描述 -->
+        <p class="mb-0 mt-2 text-netural-400 fs-10 fw-light">
+            喬伊受雇擔任艾爾帕西諾的臀部替身，可謂從天而降的契機。
+        </p>
+      </div>
+
+      <!-- 卡片7 -->
+      <div class="d-flex flex-column py-6">
+        <div class="d-flex text-white mb-1">
+          <!-- 左邊：縮圖 + 播放 icon -->
+          <div class="episode-thumb position-relative flex-shrink-0" style="width: 164px; height: 98px;">
+            <img src="../assets/images/friends6.png" class="w-100 h-100 object-fit-cover" alt="friends">
+            <!-- 播放按鈕 -->
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
+            </div>
+          </div>
+  
+          <!-- 右邊：內容 -->
+          <div class="d-flex flex-column justify-content-center ms-5 text-white">
+            <!-- 上：標題 + 下載 -->
+            <small class="mb-1">EP7</small>
+            <h6 class="mb-1 fs-8 fw-light">停電</h6>
+            <small class="text-netural-400 fs-10 fw-light">20 分</small>
+          </div>
+          <!-- 右邊：下載按鈕 -->
+          <img src="../assets/images/download.svg" alt="下載" class="ms-auto" style="width: 24px;" >
+        </div>
+        <!-- 下：描述 -->
+        <p class="mb-0 mt-2 text-netural-400 fs-10 fw-light">
+            菲碧正要在中央咖啡廳演唱悲情民歌時，紐約突然發生大地震。
+        </p>
+      </div>
+
+    </section>
+
+    
+    
   </div>
 </div>
 
 
+
+
+
+
+
+    
+
+
+
+
+
+
   </div>
+
     
     <script type="module" src="../main.js"></script>
   </body>

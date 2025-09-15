@@ -15,5 +15,25 @@
 }
 
 .test-padding-bottom{
-    padding-bottom: 242px;
+    padding-bottom: 50px;
+}
+
+.yes,
+.no{
+    width: 19px;
+    height: 19px;
+}
+
+.border-netural-500-50{
+    border-color: rgba($netural-500, 0.5);
+}
+
+.btn-white-30{
+    background-color: rgba(white, 0.3);
+    border-color: rgba(white, 0.5);
+}
+
+.party{
+    width: 100px;
+    height: 100px;
 }

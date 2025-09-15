@@ -1,0 +1,27 @@
+.top-padding{
+  padding-top: 50px;
+}
+
+.banner-overlay {
+  background: rgba(255, 255, 255, 0.3);   // 半透明黑色
+  backdrop-filter: blur(6px);       // 模糊
+  -webkit-backdrop-filter: blur(6px); // Safari 相容性
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  z-index: 1;
+}
+
+.bottom-padding-home-member{
+  padding-bottom: 100px;
+}
+
+.badge-overlap {
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-90%, -20%); // 控制重疊程度
+}

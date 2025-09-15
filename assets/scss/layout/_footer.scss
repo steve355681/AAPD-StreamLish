@@ -18,7 +18,6 @@
     border-radius: 999px;
     transition: all 0.2s ease-in-out;
     color: $white;
-
     small {
       color: $white;
     }
@@ -47,6 +46,23 @@
     }
   }
 }
+
+.nav-link-border-none{
+  border: none !important;
+}
+
+.inter-margin-left{
+  margin-left: -8px;
+}
+
+.outer-margin-left{
+  margin-left: 3.5px;
+}
+
+.outer-margin-right{
+  margin-right: 3.5px;
+}
+
 
 // 20250831的dev程式碼(後來發現放到github page有異常，修改如上)
 

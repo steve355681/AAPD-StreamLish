@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>六人行 | 第一季 EP2</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <div class="video-wrapper d-flex justify-content-center align-items-center vw-100 vh-100 bg-black position-relative"
+    id="muli-subs-control">
+    <!-- 影片檔 -->
+    <video id="myVideo" preload="auto" class="video-js vjs-fluid" data-setup="{}">
+      <!-- <source src="https://www.pexels.com/download/video/27300968/" type="video/mp4"> -->
+      <source src="https://videos.pexels.com/video-files/27300968/12115023_2560_1440_30fps.mp4" type="video/mp4">
+      <p class="vjs-no-js">您的瀏覽器不支援 video 標籤</p>
+    </video>
+    <!-- 雙語字幕 -->
+    <div class="muti-subs-area text-white flex-shrink-0" id="muti-subs-area">
+      <div class="d-flex p-6 pe-0 border-bottom border-netural-500">
+        <span class="muti-subs-title me-auto">雙語字幕</span>
+        <span class="material-symbols-rounded muti-subs-close" id="muti-subs-close">close</span>
+      </div>
+      <ul class="subtitle-panel list-unstyled overflow-y-scroll mb-0" id="subtitle-panel"></ul>
+    </div>
+    <!-- 收藏單字 -->
+    <div class="word-define text-white flex-shrink-0" id="word-define">
+      <div class="d-flex p-6 pe-0 border-bottom border-netural-500">
+        <span class="material-symbols-rounded me-auto" id="back-muti-subs-area">chevron_left</span>
+        <span class="material-symbols-rounded favorite-icon" id="favorite-icon">favorite</span>
+      </div>
+      <div class="word-define-panel overflow-y-auto">
+        <div class="ps-6 pt-3 pb-5 border-bottom border-netural-500" style="padding-right: 50px;">
+          <p class="h6 fw-bold mb-3">miraculous</p>
+          <div class="d-flex align-items-center mb-1">
+            <p class="fs-9 fw-normal">KK[mɪˋrækjələs]</p>
+            <span class="material-symbols-rounded fs-8">volume_up</span>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <p class="fs-9 fw-normal">DJ[miˋrækjuləs]</p>
+            <span class="material-symbols-rounded fs-8">volume_up</span>
+          </div>
+          <p class="fs-9 fw-normal">神奇的；超自然的；奇蹟般的</p>
+        </div>
+        <div class="ps-6 pt-3 pb-5 border-bottom border-netural-500" style="padding-right: 50px;">
+          <p class="h6 fw-bold mb-3">影片例句</p>
+          <ul class="ps-8 mb-0">
+            <li class="fs-9 fw-normal">
+              <p>Something quite miraculous happened.</p>
+              <p>發生了一件相當神奇的事情。</p>
+            </li>
+          </ul>
+        </div>
+        <div class="ps-6 pt-3 pb-5 border-bottom border-netural-500" style="padding-right: 50px;">
+          <p class="h6 fw-bold mb-3">相關例句</p>
+          <ul class="ps-8 mb-0">
+            <li class="fs-9 fw-normal mb-1">
+              <p>The diet promised miraculous weight loss.</p>
+              <p>有人保證說按照這個食譜進餐就會有非凡的減肥效果。</p>
+            </li>
+            <li class="fs-9 fw-normal">
+              <p>Well, you've made a miraculous recovery since last night!</p>
+              <p>哇，才一個晚上你便奇蹟似地康復了！</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 片尾測驗 -->
+    <div class="quiz-wrapper position-absolute top-0 bottom-0 start-0 end-0 z-1">
+      <div class="quiz-question-wrapper d-flex w-100 h-100 justify-content-between align-items-center">
+        <div class="flex-shrink-0 w-50 position-relative h-100 border-3 border border-white rounded-1 me-4">
+          <img class="w-100 h-100 object-fit-cover" src="../assets/images/quiz-pic.png" alt="quiz pic">
+          <p class="quiz-img-text position-absolute start-0 end-0 fs-9 text-white text-center">Something quite ___________ happened</p>
+        </div>
+        <div class="quiz-question w-50">
+          <p class="h6 fw-bold text-white text-center mb-6" id="quiz-question-title">從左圖對話中選出最合適的答案：</p>
+          <ul class="list-unstyled d-flex flex-column gap-6 mb-0" id="question-section"></ul>
+          <button type="button" class="btn quiz-exit-btn position-absolute top-0 end-0 p-1 mt-3 me-6" id="quiz-exit-btn">
+            <img src="../assets/images/exit.svg" alt="exit">
+            <span class="fs-9 text-white">離開測驗</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- 聲音檔 -->
+    <audio id="myAudio">
+      <source src="../assets/audio/Natural Vibes.mp3" type="audio/mpeg">
+      您的瀏覽器不支援 audio 標籤。
+    </audio>
+    <!-- 提示訊息 -->
+    <div id="orientation-warning" class="orientation-warning">
+      <div class="orientation-box">
+        📱 請旋轉手機至橫向模式，以獲得最佳觀影體驗
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../js/video.js"></script>
+</body>
+</html>

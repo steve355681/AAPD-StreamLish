@@ -1,0 +1,74 @@
+.speaker {
+  width: 12px;
+  height: 12px;
+}
+
+.white-20 {
+  background-color: rgba($white, 0.2);
+}
+
+.blue-20 {
+  background-color: rgba(#3c8af7, 0.2);
+}
+
+.bottom-padding {
+  padding-bottom: 86px;
+}
+
+.border-netural-500-50 {
+  border-color: rgba($netural-500, 0.5);
+}
+
+.video-card-1 {
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/fantastic beasts.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-card-2 {
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/harry potter.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-card-3 {
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/Miss Peregrine's Home for Peculiar Children.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-card-4 {
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/the falls.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-card-5 {
+  width: 109px;
+  height: 156px;
+  background-image: url("../images/maze runner.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.video-word {
+  letter-spacing: 0px;
+}
+
+.play {
+  width: 16px;
+  height: 16px;
+}

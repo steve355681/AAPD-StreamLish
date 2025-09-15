@@ -1,0 +1,26 @@
+/* Regular */
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/assets/fonts/SF-Pro-Display-Regular.woff2') format('woff2');
+  font-weight: 500; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/assets/fonts/SF-Pro-Display-Medium.woff2') format('woff2');
+  font-weight: 700; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/assets/fonts/SF-Pro-Display-Bold.woff2') format('woff2');
+  font-weight: 900; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
