@@ -32,6 +32,8 @@
 .review-list {
   margin-top: -24px;
   margin-bottom: 0;
+  transform: translateY(50px);
+  padding-bottom: 50px;
   li {
     cursor: pointer;
   }
