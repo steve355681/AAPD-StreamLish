@@ -6,6 +6,73 @@
   height: 100% !important;
   padding-top: 0 !important;
   transition: margin-right 0.5s;
+  background-color: $tertiary-950;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(178deg, $black 0%, transparent 50%, $black 100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s;
+    z-index: 1;
+  }
+  .vjs-menu {
+    right: 0px;
+    left: auto;
+  }
+  .vjs-menu-button:focus {
+    outline: none;
+  }
+  .vjs-menu li.vjs-menu-item:focus {
+    background-color: transparent;
+    outline: none;
+  }
+  .vjs-menu .vjs-menu-content {
+    width: 144px;
+    border-radius: 4px;
+    max-height: none;
+    background-color: rgba($tertiary-900, .8);
+    border: 1px solid $netural-500;
+    overflow: visible;
+    right: 0;
+  }
+  .vjs-menu .vjs-menu-content::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: -8px;
+    width: 100%;
+    height: 8px;
+  }
+  .vjs-menu .vjs-menu-item {
+    justify-content: flex-start;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .vjs-menu .vjs-menu-item:not(.vjs-menu-item-title) {
+    padding: 8px;
+    padding-left: 32px;
+  }
+  .vjs-menu .vjs-menu-item:not(.vjs-menu-item-title).vjs-selected {
+    background-color: transparent;
+    color: $white;
+    padding-left: 8px;
+  }
+  .vjs-menu .vjs-menu-item:not(.vjs-menu-item-title).vjs-selected::before {
+    content: "\e5ca";
+    font-family: 'Material Symbols Rounded';
+    font-size: 20px;
+    margin-right: 4px;
+    line-height: 1;
+  }
+  .vjs-menu .vjs-menu-item-title {
+    pointer-events: none;
+    padding: 8px 16px;
+    color: $netural-400;
+    border-bottom: 1px solid $netural-500;
+  }
+
   .vjs-extra-group {
     position: absolute;
     top: 24px;
@@ -14,6 +81,7 @@
     display: flex;
     width: 100%;
     transition: opacity 0.6s;
+    z-index: 2;
   }
   .vjs-extra-group > .vjs-button {
     width: 2.4em;
@@ -56,6 +124,7 @@
     display: flex;
     transform: translate(-50%, -50%);
     transition: opacity 0.6s;
+    z-index: 2;
   }
   .vjs-play-group > .vjs-button {
     width: 4.8em;
@@ -104,6 +173,7 @@
     padding-left: map-get($spacers, 8);
     padding-right: map-get($spacers, 8);
     padding-bottom: map-get($spacers, 8);
+    z-index: 3;
   }
   .vjs-time-group {
     display: flex;
@@ -170,9 +240,6 @@
       content: "";
       background: url("/assets/images/subtitles.svg") no-repeat;
     }
-    .vjs-menu .vjs-menu-content {
-      bottom: 1em;
-    }
   }
   .vjs-comment-button {
     margin-right: map-get($spacers, 5);
@@ -187,12 +254,11 @@
       line-height: 1.5;
     }
     .vjs-menu .vjs-menu-content {
-      bottom: .8em;
+      bottom: 16px;
     }
-    .vjs-menu-item {
-      font-size: 14px;
-      line-height: 1.2;
-      padding: 4px 0;
+    .vjs-menu .vjs-menu-content::after {
+      bottom: -16px;
+      height: 16px;
     }
   }
   .vjs-list-button {
@@ -298,6 +364,10 @@
   .video-js {
     margin-right: 332px;
   }
+  .video-js::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 // 收藏單字
@@ -344,6 +414,7 @@
   margin-bottom: 24px;
   opacity: 0;
   visibility: hidden;
+  z-index: 2;
   .vjs-button {
     width: auto;
     font-size: $font-size-base;
