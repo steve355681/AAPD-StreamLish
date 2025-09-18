@@ -1,6 +1,5 @@
-import '../assets/scss/all.scss';
-import 'bootstrap/dist/js/bootstrap.min.js';
-
+import "../assets/scss/all.scss";
+import "bootstrap/dist/js/bootstrap.min.js";
 
 const questions = [
   {
@@ -11,8 +10,8 @@ const questions = [
       { option: "a.神奇的,奇蹟般的", correct: true },
       { option: "a. 補償的", correct: false },
       { option: "n. 商品、貨物", correct: false },
-      { option: "v. 爭論、爭端", correct: false }
-    ]
+      { option: "v. 爭論、爭端", correct: false },
+    ],
   },
   {
     word: "loan",
@@ -22,20 +21,20 @@ const questions = [
       { option: "v. 貸款、借款", correct: true },
       { option: "n. 一條麵包", correct: false },
       { option: "n. 土壤", correct: false },
-      { option: "v. 爭論、爭端", correct: false }
-    ]
-  }
+      { option: "v. 爭論、爭端", correct: false },
+    ],
+  },
 ];
 
 let step = 0;
 let questionLock = false;
 const questionResult = {
   correctCount: 0,
-  wrongCount: 0
+  wrongCount: 0,
 };
 
-import checkImg from '../assets/images/check.png';
-import wrongImg from '../assets/images/wrong.png';
+import checkImg from "../assets/images/check.png";
+import wrongImg from "../assets/images/wrong.png";
 
 window.addEventListener("load", loadQuestion);
 
@@ -66,7 +65,16 @@ function loadQuestion() {
   question.options.forEach((option, idx) => {
     const btn = document.createElement("button");
     btn.type = "button";
-    btn.classList.add("btn", "btn-primary-500", "w-100", "rounded-pill", "text-white", "mb-6", "py-5");
+    btn.classList.add(
+      "btn",
+      "btn-primary-500",
+      "w-100",
+      "rounded-pill",
+      "text-white",
+      "mb-6",
+      "py-5",
+      "fs-7"
+    );
     btn.textContent = option.option;
     btn.dataset.index = idx;
 
@@ -84,8 +92,10 @@ function loadQuestion() {
 const nextBtn = document.getElementById("next-button");
 nextBtn.addEventListener("click", () => {
   nextBtn.classList.add("opacity-0");
-  if(step === questions.length) {
-    const testQuestionWrapper = document.getElementById("test-question-wrapper");
+  if (step === questions.length) {
+    const testQuestionWrapper = document.getElementById(
+      "test-question-wrapper"
+    );
     testQuestionWrapper.classList.add("d-none");
     const testFinish = document.getElementById("test-finish");
     testFinish.classList.remove("d-none");
@@ -106,12 +116,12 @@ function handleAnswer(selectBtn, question) {
   const testQuestions = document.getElementById("test-questions").children;
 
   let isCorrect = false;
-  for(let i = 0; i < testQuestions.length; i++) {
+  for (let i = 0; i < testQuestions.length; i++) {
     const btn = testQuestions[i];
 
     const idx = btn.dataset.index;
     const option = question.options[idx];
-  
+
     // 點擊後顯示中文翻譯
     if (btn === selectBtn) {
       if (option.correct) {
@@ -133,8 +143,7 @@ function handleAnswer(selectBtn, question) {
       btn.classList.remove("btn-primary-500");
       btn.classList.add("btn-success-300");
       btn.innerHTML += `<img src="${checkImg}" alt="check" class="yes align-bottom ms-2">`;
-    }
-    else {
+    } else {
       btn.disabled = true;
     }
   }
@@ -142,9 +151,11 @@ function handleAnswer(selectBtn, question) {
   const nextBtn = document.getElementById("next-button");
   nextBtn.classList.remove("opacity-0");
   const nextBtnText = document.getElementById("next-button-text");
-  if(step === questions.length) {
+  if (step === questions.length) {
     nextBtnText.textContent = "結束了，完成測驗";
   } else {
-    nextBtnText.textContent = isCorrect ? "我真棒，挑戰下一題" : "真可惜，挑戰下一題";
+    nextBtnText.textContent = isCorrect
+      ? "我真棒，挑戰下一題"
+      : "真可惜，挑戰下一題";
   }
 }

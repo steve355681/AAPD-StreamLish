@@ -12,15 +12,15 @@
       <!-- Navbar&Tab -->
       <section>
         <nav class="bg-tertiary-950">
-          <div class="container">
+          <div class="container-fluid px-0">
             <div class="d-flex justify-content-center">
               <!-- 上方選單按鈕 -->
               <div class="top-nav nav nav-tabs w-100" id="nav-tab" role="tablist">
                 <button 
-                class="nav-link col-6 py-6 fs-9" 
-                id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-video" type="button" role="tab" aria-controls="nav-video" aria-expanded="false">影片收藏</button>
+                class="nav-link col-6 fs-9 active" 
+                id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-video" type="button" role="tab" aria-controls="nav-video" aria-current="page" aria-expanded="true">影片收藏</button>
                 
-                <button class="nav-link active col-6 py-6 fs-9" id="nav-vocab-tab" data-bs-toggle="tab" data-bs-target="#nav-vocab" type="button" role="tab" aria-controls="nav-vocab" aria-current="page" aria-expanded="true">單字收藏</button>
+                <button class="nav-link col-6 fs-9" id="nav-vocab-tab" data-bs-toggle="tab" data-bs-target="#nav-vocab" type="button" role="tab" aria-controls="nav-vocab" aria-expanded="false">單字收藏</button>
               </div>
             </div>
           </div>
@@ -28,10 +28,10 @@
         <!-- 內容 -->
           <div class="tab-content" id="nav-tabContent">
             <!-- 影片收藏內容 -->
-              <div class="tab-pane fade liner" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
+              <div class="tab-pane fade liner show active" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
                 <!-- 左側nav選單 -->
-                <div class="container">
-                  <nav class="pt-8 mb-5 d-flex align-items-center justify-content-center">
+                <div class="container-fluid">
+                  <nav class="pt-8 mb-5 d-flex align-items-center">
                     <ul class="type-nav nav nav-pills" id="pills-type-tab" role="tablist">
                       <li class="nav-item" role="presentation">
                         <input type="radio" class="btn-check" name="category" id="movie-input" autocomplete="off" checked>
@@ -39,15 +39,15 @@
                       </li>
                       <li class="nav-item" role="presentation">
                         <input type="radio" class="btn-check" name="category" id="series-input" autocomplete="off">
-                        <label class="nav-link px-5 py-2 fs-9 ms-n5" id="pills-series-tab" data-bs-toggle="pill" data-bs-target="#pills-series" role="tab" aria-controls="pills-series" aria-selected="false" for="series-input">影集</label>
+                        <label class="nav-link px-5 py-2 fs-9 ms-n3" id="pills-series-tab" data-bs-toggle="pill" data-bs-target="#pills-series" role="tab" aria-controls="pills-series" aria-selected="false" for="series-input">影集</label>
                       </li>
                       <li class="nav-item" role="presentation">
                         <input type="radio" class="btn-check" name="category" id="anime-input" autocomplete="off">
-                        <label class="nav-link px-5 py-2 fs-9 ms-n5" id="pills-anime-tab" data-bs-toggle="pill" data-bs-target="#pills-anime" role="tab" aria-controls="pills-anime" aria-selected="false" for="anime-input">動畫</label>
+                        <label class="nav-link px-5 py-2 fs-9 ms-n3" id="pills-anime-tab" data-bs-toggle="pill" data-bs-target="#pills-anime" role="tab" aria-controls="pills-anime" aria-selected="false" for="anime-input">動畫</label>
                       </li>
                     </ul>
   
-                    <p class="text-netural-500 fs-9">｜</p>
+                    <p class="text-netural-500 fs-9 me-3">｜</p>
                     <!-- 右側nav按鈕 -->
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                       <li class="nav-item fs-9" role="presentation">
@@ -56,19 +56,18 @@
                         <button class="nav-link px-5 py-2 fs-9 active show" id="pills-all" data-bs-toggle="pill" data-bs-target="#pills-movie" type="button" role="tab" aria-controls="pills-all" aria-selected="true" aria-pressed="true" disabled>全部</button>
                       </li>
                       <li class="nav-item fs-9" role="presentation">
-                        <button class="nav-link px-5 py-2 fs-9 ms-n5" id="pills-no" data-bs-toggle="pill" data-bs-target="#pills-no" type="button" role="tab" aria-controls="pills-no" aria-selected="false" disabled>未觀看</button>
+                        <button class="nav-link px-5 py-2 fs-9 ms-n3" id="pills-no" data-bs-toggle="pill" data-bs-target="#pills-no" type="button" role="tab" aria-controls="pills-no" aria-selected="false" disabled>未觀看</button>
                       </li>
                       <li class="nav-item fs-9" role="presentation">
-                        <button class="nav-link px-5 py-2 fs-9 ms-n5" id="pills-yes" data-bs-toggle="pill" data-bs-target="#pills-yes" type="button" role="tab" aria-controls="pills-yes" aria-selected="false" disabled>已觀看</button>
+                        <button class="nav-link px-5 py-2 fs-9 ms-n3" id="pills-yes" data-bs-toggle="pill" data-bs-target="#pills-yes" type="button" role="tab" aria-controls="pills-yes" aria-selected="false" disabled>已觀看</button>
                       </li>
                     </ul>
                   </nav>
                 </div>
                 <!-- 第二行nav -->
                 <section>
-                  <div class="container">
-                    <div class="d-flex align-items-center justify-content-center px-2">
-                      <div class="d-flex">
+                  <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between px-2">
                       <!-- 人氣熱門 -->
                       <div class="new-to-old dropdown">
                         <button class="btn text-white fs-9 align-items-center d-flex justify-content-center border-0 ps-0" type="button" id="dropdownMenuButtonList" data-bs-toggle="dropdown" aria-expanded="false">
@@ -82,23 +81,24 @@
                           <li><a class="dropdown-item fs-9" href="#">最近觀看</a></li>
                         </ul>
                       </div>
-                      <!-- 搜尋 -->
-                      <a href="#" class="text-white fs-9 d-flex align-items-center me-3 ms-auto">
-                        搜尋
-                        <span class="search material-symbols-outlined ms-1 fs-8">search</span>
-                      </a>
-                      </div>
-                      <!-- 編輯 -->
-                      <a href="#" class="text-white fs-9 d-flex align-items-center ps-2 border-start border-start-netural-500">
-                        編輯
-                        <span class="edit material-symbols-outlined ms-1 fs-8">edit</span>
-                      </a>
+                      <div class="d-flex align-items-center ms-auto">
+                        <!-- 搜尋 -->
+                        <a href="#" class="text-white fs-9 d-flex align-items-center me-3">
+                          搜尋
+                          <span class="search material-symbols-outlined ms-1 fs-8">search</span>
+                        </a>
+                        </div>
+                        <!-- 編輯 -->
+                        <a href="#" class="text-white fs-9 d-flex align-items-center ps-2 border-start border-start-netural-500">
+                          編輯
+                          <span class="edit material-symbols-outlined ms-1 fs-8">edit</span>
+                        </a>
                     </div>
                   </div>
                 </section>
                 <!-- 下方顯示內容 -->
                 <div class="bottom-padding">
-                  <div class="container">
+                  <div class="container-fluid">
                     <div class="tab-content pt-5" id="pills-tabContent">
                       <!-- 電影顯示內容 -->
                       <div class="tab-pane fade show active" id="pills-movie" role="tabpanel" aria-labelledby="pills-movie-tab">
@@ -190,12 +190,12 @@
                 </div>
               </div>
             <!-- 單字收藏內容 -->
-            <div class="tab-pane fade show active pt-8 m-0 liner" id="nav-vocab" role="tabpanel" aria-labelledby="nav-vocab-tab">
+            <div class="tab-pane fade pt-8 m-0 liner" id="nav-vocab" role="tabpanel" aria-labelledby="nav-vocab-tab">
               <div class="liner">
               <!-- 按鈕nav -->
               <section class="pb-5">
-                <div class="container">
-                  <div class="d-flex align-items-center justify-content-center">
+                <div class="container-fluid">
+                  <div class="d-flex align-items-center">
                     <!-- nav左側dropdown -->
                     <div class="left-nav d-flex align-items-center">
                       <button class="btn btn-outline-netural-500 text-white fs-9 rounded-pill align-items-center d-flex justify-content-center" type="button" id="dropdownMenuLanguage" data-bs-toggle="dropdown" aria-expanded="false">
@@ -224,7 +224,7 @@
                     </div>
                     
                     <!-- nav右側 -->
-                    <p class="text-netural-500 fs-9">｜</p>
+                    <p class="text-netural-500 fs-9 mx-1">｜</p>
           
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                       <li class="nav-item fs-9" role="presentation"><input type="radio" 
@@ -232,10 +232,10 @@
                         <button class="nav-link px-5 py-2 fs-9 active show" id="pills-all" data-bs-toggle="pill" data-bs-target="#pills-vocab" type="button" role="tab" aria-controls="pills-vocab" aria-selected="true" aria-pressed="true" disabled>全部</button>
                       </li>
                       <li class="nav-item fs-9" role="presentation">
-                        <button class="nav-link px-5 py-2 fs-9 ms-n5" id="pills-1" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1" aria-selected="false" disabled>未掌握</button>
+                        <button class="nav-link px-5 py-2 fs-9 ms-n3" id="pills-1" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1" aria-selected="false" disabled>未掌握</button>
                       </li>
                       <li class="nav-item fs-9" role="presentation">
-                        <button class="nav-link px-5 py-2 fs-9 ms-n5" id="pills-2" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2" aria-selected="false" disabled>已掌握</button>
+                        <button class="nav-link px-5 py-2 fs-9 ms-n3" id="pills-2" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2" aria-selected="false" disabled>已掌握</button>
                       </li>
                     </ul>
                   </div>
@@ -244,9 +244,8 @@
 
               <!-- 篩選nav -->
               <section class="mb-5">
-                <div class="container">
-                  <div class="d-flex align-items-center justify-content-center">
-                    <div class="d-flex">
+                <div class="container-fluid">
+                  <div class="d-flex align-items-center justify-content-between">
                       <!-- 由新到舊 -->
                       <div class="new-to-old dropdown">
                         <button class="btn text-white fs-9 align-items-center d-flex justify-content-center border-0 ps-0" type="button" id="dropdownMenuButtonType" data-bs-toggle="dropdown" aria-expanded="false">
@@ -259,31 +258,32 @@
                         </ul>
                       </div>
                       <!-- 搜尋 -->
-                      <a href="#" class="text-white fs-9 d-flex align-items-center me-3 ms-auto">
-                        搜尋
-                        <span class="search material-symbols-outlined ms-1 fs-8">search</span>
-                      </a>
-                    </div>
-                    <!-- 編輯 -->
-                    <a href="#" class="text-white fs-9 d-flex align-items-center ps-2 border-start border-start-netural-500">
-                      編輯
-                      <span class="edit material-symbols-outlined ms-1 fs-8">edit</span>
-                    </a>
+                      <div class="ms-auto d-flex align-items-center">
+                        <a href="#" class="text-white fs-9 d-flex align-items-center me-3">
+                          搜尋
+                          <span class="search material-symbols-outlined ms-1 fs-8">search</span>
+                        </a>
+                        <!-- 編輯 -->
+                        <a href="#" class="text-white fs-9 d-flex align-items-center ps-2 border-start border-start-netural-500">
+                          編輯
+                          <span class="edit material-symbols-outlined ms-1 fs-8">edit</span>
+                        </a>
+                      </div>
                   </div>
                 </div>
               </section>
               
               <!-- 卡片區 -->
               <section class="bottom-padding">
-                <div class="container">
+                <div class="container-fluid">
                   <ul>
                     <li class="card bg-tertiary-900 p-6 rounded-3 mb-6">
                       <div class="d-flex justify-content-between">
                         <a href="word-detail.html" class="me-5">
                           <h1 class="text-white fs-6 fw-bold mb-3">miraculous</h1>
                           <p class="text-white fs-9 mb-3">a.神奇的, 超自然的, 奇蹟般的</p>
-                          <button class="btn fs-11 text-white rounded-pill white-20">日常生活</button>
-                          <button class="btn fs-11 text-white rounded-pill ms-3 blue-20">未掌握</button>
+                          <button class="btn fs-11 text-white rounded-pill white-20 py-1 px-3">日常生活</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 blue-20 py-1 px-3">未掌握</button>
                         </a>
     
                         <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
@@ -303,8 +303,8 @@
                         <div class="me-5">
                           <h1 class="text-white fs-6 fw-bold mb-3">loan</h1>
                           <p class="text-white fs-9 mb-3">v. 借款<br>n. 貸款, 借款</p>
-                          <button class="btn fs-11 text-white rounded-pill white-20">職場</button>
-                          <button class="btn fs-11 text-white rounded-pill ms-3 blue-20">未掌握</button>
+                          <button class="btn fs-11 text-white rounded-pill white-20 py-1 px-3">職場</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 blue-20 py-1 px-3">未掌握</button>
                         </div>
     
                         <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
@@ -324,8 +324,8 @@
                         <div class="me-5">
                           <h1 class="text-white fs-6 fw-bold mb-3">assure</h1>
                           <p class="text-white fs-9 mb-3">v. 擔保, 確保</p>
-                          <button class="btn fs-11 text-white rounded-pill white-20">職場</button>
-                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                          <button class="btn fs-11 text-white rounded-pill white-20 py-1 px-3">職場</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35 py-1 px-3">已掌握</button>
                         </div>
     
                         <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
@@ -345,8 +345,8 @@
                         <div class="me-5">
                           <h1 class="text-white fs-6 fw-bold mb-3">coma</h1>
                           <p class="text-white fs-9 mb-3">n. 昏迷</p>
-                          <button class="btn fs-11 text-white rounded-pill white-20">醫療</button>
-                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                          <button class="btn fs-11 text-white rounded-pill white-20 py-1 px-3">醫療</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35 py-1 px-3">已掌握</button>
                         </div>
     
                         <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
@@ -366,8 +366,8 @@
                         <div class="me-5">
                           <h1 class="text-white fs-6 fw-bold mb-3">dispute</h1>
                           <p class="text-white fs-9 mb-3">n. 爭議, 爭吵<br>v. 糾紛, 爭奪, 抵抗</p>
-                          <button class="btn fs-11 text-white rounded-pill white-20">職場</button>
-                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                          <button class="btn fs-11 text-white rounded-pill white-20 py-1 px-3">職場</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35 py-1 px-3">已掌握</button>
                         </div>
     
                         <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
@@ -387,8 +387,8 @@
                         <div class="me-5">
                           <h1 class="text-white fs-6 fw-bold mb-3">compensative</h1>
                           <p class="text-white fs-9 mb-3">a. 償還的, 償還的</p>
-                          <button class="btn fs-11 text-white rounded-pill white-20">日常生活</button>
-                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                          <button class="btn fs-11 text-white rounded-pill white-20 py-1 px-3">日常生活</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35 py-1 px-3">已掌握</button>
                         </div>
     
                         <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
@@ -408,8 +408,8 @@
                         <div class="me-5">
                           <h1 class="text-white fs-6 fw-bold mb-3">semantic</h1>
                           <p class="text-white fs-9 mb-3">a. 語義的</p>
-                          <button class="btn fs-11 text-white rounded-pill white-20">日常生活</button>
-                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35">已掌握</button>
+                          <button class="btn fs-11 text-white rounded-pill white-20 py-1 px-3">日常生活</button>
+                          <button class="btn fs-11 text-white rounded-pill ms-3 violet-35 py-1 px-3">已掌握</button>
                         </div>
     
                         <div class="d-flex flex-column justify-content-center pe-5 ps-5 border-start border-start-netural-500">
