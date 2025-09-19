@@ -47,15 +47,16 @@
   background-color: $gray-900;
 }
 
-/* 基礎樣式 */
-.nav.pills-static .nav-link {
+.nav-pills .nav-link {
   border: 1px solid transparent;
-  transition: all .2s ease-in-out;
-  color: #9fa6b2;                /* 你原本的 $netural-400 可替換 */
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  color: $netural-400;
 }
 
-/* hover、checked（radio）、或主動指定 .active 都吃同一套樣式 */
-.nav.pills-static .nav-link.is-active {
+/* hover 或 active */
+.btn-check:checked + .nav-link,
+.nav-pills .nav-link:hover{
   border: 1px solid $netural-500;
   background-color: $tertiary-900;
   color: $white;
@@ -85,8 +86,9 @@
   scrollbar-width: none;     /* Firefox */
 }
 
-.bottom-padding-home{
-  padding-bottom: 75px;
+.bottom-padding{
+  padding-bottom: 0px;
+  // padding-bottom: 75px;
 }
 
 .right-padding{

@@ -41,8 +41,8 @@
       <!-- 右上角：投放 & 關閉 -->
       <div class="position-absolute top-0 end-0 mt-5 me-6 d-flex gap-2">
         <span class="material-icons-outlined text-white bg-dark bg-opacity-50 rounded-circle p-1">cast</span>
-        <a href="StreamLish.html" class="text-white text-decoration-none">
-          <span class="material-icons-outlined text-white bg-dark bg-opacity-50 rounded-circle p-1">close</span>
+        <a href="StreamLish.html"  data-wipe data-wipe-duration="60000ms"  data-wipe-min-visible="500" data-wipe-bg="#07041F" class="text-white text-decoration-none">
+          <span class="material-icons-outlined bg-dark bg-opacity-50 rounded-circle p-1">close</span>
         </a>
       </div>
 
@@ -417,7 +417,8 @@
 
   </div>
 
-    
+    <!-- 轉場覆蓋層 -->
+    <script defer src="./js/wipe.js"></script>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

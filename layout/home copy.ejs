@@ -35,6 +35,15 @@
 
       <!-- 指示點 -->
       <div class="carousel-indicators">
+        <!-- <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1" class=""></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2" class=""></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="3" class=""></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="4" class=""></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="5" class=""></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="6" class=""></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="7" class=""></button> -->
+
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2"></button>
@@ -42,6 +51,7 @@
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="4"></button>
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="5"></button>
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="6"></button>
+        <!-- <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="7"></button> -->
       </div>
 
       <!-- 左右切換箭頭 -->
@@ -57,21 +67,24 @@
 
     
     <!-- <div class="container"> -->
-    <div class="container bottom-padding-home right-padding fw-light">
-      <div class="py-4 mb-8">
-        <ul class="nav nav-pills pills-static pe-none" role="tablist" aria-label="分類">
+    <div class="container bottom-padding right-padding fw-light">
+      <!-- 分類按鈕 -->
+      <div class="py-4 mb-8 ">
+        <ul class="nav nav-pills" role="tablist">
           <li class="nav-item" role="presentation">
-            <span class="nav-link rounded-pill px-5 py-2 fs-10 is-active" aria-current="page">電影</span>
+            <input type="radio" class="btn-check" name="category" id="movie" autocomplete="off" checked>
+            <label class="nav-link rounded-pill px-5 py-2 fs-10" for="movie">電影</label>
           </li>
           <li class="nav-item" role="presentation">
-            <span class="nav-link rounded-pill px-5 py-2 fs-10">影集</span>
+            <input type="radio" class="btn-check" name="category" id="series" autocomplete="off">
+            <label class="nav-link rounded-pill px-5 py-2 fs-10" for="series">影集</label>
           </li>
           <li class="nav-item" role="presentation">
-            <span class="nav-link rounded-pill px-5 py-2 fs-10">動畫</span>
+            <input type="radio" class="btn-check" name="category" id="anime" autocomplete="off">
+            <label class="nav-link rounded-pill px-5 py-2 fs-10" for="anime">動畫</label>
           </li>
         </ul>
       </div>
-
 
 
       <!-- 繼續觀看 -->
