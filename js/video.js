@@ -15,14 +15,10 @@ if (referrer) {
   const url = new URL(referrer);
   lastPath = url.pathname.split("/").pop(); // 取最後一段
 
-  // 如果最後是空字串 (例如結尾是 "/")，補上 index.html
-  if (!lastPath) {
-    lastPath = "index.html";
-  }
-  // 如果最後沒有副檔名，也補上 index.html
-  else if (!lastPath.includes(".")) {
-    lastPath = "index.html";
-  }
+  // 預設回到 album.html
+  ["album.html", "word-detail.html"].includes(lastPath) ? null : lastPath = "album.html";
+} else {
+  lastPath = "album.html";
 }
 
 
@@ -32,11 +28,15 @@ audio.muted = false;
 let chooseSub = "zh";
 let prevSub = "zh";
 
-
 const vjsComponent = videojs.getComponent('Component');
 const vjsButton = videojs.getComponent('Button');
 const vjsMenuButton = videojs.getComponent('MenuButton');
 const vjsMenuItem = videojs.getComponent('MenuItem');
+const vjsPlaybackRateMenuButton = videojs.getComponent('PlaybackRateMenuButton');
+
+const introDuration = 6; // 預告長度
+const mainDuration = 60; // 正片長度
+let firstLoad = false;
 
 class TitleComponent extends vjsComponent {
   constructor(player, options) {
@@ -141,8 +141,15 @@ class MultiSubsButton extends vjsMenuButton {
     const labels = [
       { name:'中文', sub:'zh' },
       { name:'英文', sub:'en' },
-      { name:'Off', sub:'' }
+      { name:'無字幕', sub:'' }
     ];
+    const titleItem = new vjsMenuItem(this.player_, {
+      label: "字幕",
+      selectable: false
+    });
+    titleItem.addClass('vjs-menu-item-title');
+    items.push(titleItem);
+
     labels.forEach(label => {      
       const item = new vjsMenuItem(this.player_, {
         label: label.name,
@@ -162,7 +169,7 @@ class MultiSubsButton extends vjsMenuButton {
     });
 
     // 預設 "中文" 被選中
-    items[0].selected(true);
+    items[1].selected(true);
 
     return items;
   }
@@ -178,6 +185,21 @@ class CommentButton extends vjsButton {
   }
   handleClick() {
     console.log("留言按鈕被點擊！");
+  }
+}
+class CustomPlaybackRateButton extends vjsPlaybackRateMenuButton {
+  createItems() {
+    const items = [];
+
+    const titleItem = new vjsMenuItem(this.player_, {
+      label: "播放速度",
+      selectable: false
+    });
+    titleItem.addClass('vjs-menu-item-title');
+    items.push(titleItem);
+
+    // 原本播放速度選項
+    return items.concat(super.createItems());
   }
 }
 class ListButton extends vjsButton {
@@ -280,6 +302,7 @@ videojs.registerComponent('RemainingTime', RemainingTime);
 videojs.registerComponent('TranslateButton', TranslateButton);
 videojs.registerComponent('MultiSubsButton', MultiSubsButton);
 videojs.registerComponent('CommentButton', CommentButton);
+videojs.registerComponent('CustomPlaybackRateButton', CustomPlaybackRateButton);
 videojs.registerComponent('ListButton', ListButton);
 videojs.registerComponent('NextButton', NextButton);
 
@@ -325,7 +348,7 @@ class ToolsGroup extends vjsComponent {
     this.addChild('TranslateButton');
     this.addChild('MultiSubsButton');
     this.addChild('CommentButton');
-    this.addChild('playbackRateMenuButton');
+    this.addChild('CustomPlaybackRateButton');
     this.addChild('ListButton');
     this.addChild('NextButton');
   }
@@ -382,11 +405,15 @@ videojs.registerComponent('EndScreenOptionsGroup', EndScreenOptionsGroup);
 
 // ----------- 初始化播放器 ----------
 const player = videojs('myVideo', {
-  autoplay: false,
+  autoplay: true,
   muted: false,
   bigPlayButton: false,
   controls: true,
-  inactivityTimeout: 5000, 
+  inactivityTimeout: 5000,
+  userActions: {
+    // 停用點擊切換播放
+    click: false,
+  },
   controlBar: {
     children: [
       'TimeGroup',
@@ -405,6 +432,10 @@ player.addChild('EndScreenOptionsGroup');
 // 同步播放/暫停
 player.on('play', () => {
   // console.log('[DEBUG] Video.js 偵測到 play');
+  if(firstLoad) {
+    player.userActive(false);
+    firstLoad = false;
+  }
   audio.play();
 });
 player.on('pause', () => {
@@ -420,9 +451,6 @@ player.on('pause', () => {
 player.on('seeked', () => {
   audio.currentTime = player.currentTime();
 });
-
-
-const mainDuration = 60; // 正片長度
 
 // 偵測時間更新 (影片是否真的停下來)
 player.on('timeupdate', () => {
@@ -448,6 +476,13 @@ player.on('userinactive', () => {
     // 超過 idle 時隱藏按鈕
     document.querySelector('.vjs-extra-group').style.opacity = '0';
     document.querySelector('.vjs-play-group').style.opacity = '0';
+  }
+});
+
+player.on('loadedmetadata', () => {
+  firstLoad = true;
+  if(lastPath === "word-detail.html") {
+    player.currentTime(introDuration);
   }
 });
 
