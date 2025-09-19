@@ -31,3 +31,16 @@
 .bottom-padding{
   padding-bottom: 75px;
 }
+
+.btn-play{
+  font-weight:510;              /* 多數字型會落在 500/600 之間取近似值 */
+  line-height:1.5;              /* 150% */
+  letter-spacing:0.9px;
+}
+
+/* 微調：讓「EP1」稍微拉開 */
+.ep{
+   letter-spacing:1.5px;
+  }
+
+

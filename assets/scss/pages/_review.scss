@@ -1,11 +1,15 @@
 .review-wrapper {
+  min-height: 100vh;
+  min-height: 100dvh;
   padding-bottom: 70px;
 }
 .review-header {
   line-height: 0;
   position: sticky;
-  top: 50px;
+  top: 0;
   transition: padding-bottom .6s;
+  --header-width: 100px;
+  --header-height: 74px;
 }
 .review-back-link {
   padding-right: 33px;
@@ -14,18 +18,15 @@
 }
 .review-title {
   position: absolute;
-  bottom: 12px;
+  bottom: 0;
   left: 0;
-  transform: translate(0, 0);
-  transition: transform .6s, bottom .6s, left .6s, font-size .6s;
+  transform: translate(0, -12px);
+  transition: transform .6s;
 }
 .review-header.scrolled {
   padding-bottom: 0 !important;
   .review-title {
-    font-size: 1rem;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, calc(-50% + 6px));
+    transform: translate(calc(var(--header-width) / 2 - 50%), calc(-1 * var(--header-height) / 2)) scale(.8);
   }
 }
 

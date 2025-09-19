@@ -1,19 +1,19 @@
-<body class="bg-black">
+<body class="bg-tertiary-950">
 
     <!-- 會員首頁 Banner -->
-  <div class="card border-0 rounded-0 text-white position-relative" >
+  <div class="card border-0 rounded-0 text-white position-relative banner-margin" >
     <!-- 背景圖 -->
-    <img src="../assets/images/japan view.png" class="card-img object-fit-cover" alt="會員背景" >
-
+    <img src="../assets/images/japan view.png" class="card-img object-fit-cover"  alt="會員背景">
+    <div class="carousel-gradient"></div><!-- 底部黑色漸層遮罩 -->
     <!-- 黑色半透明遮罩 -->
-    <div class="position-absolute bottom-0 start-0 w-100 h-50 banner-overlay"></div>
+    <div class="position-absolute bottom-0 start-0 w-100  banner-overlay" style="height: 45%;"></div>
 
     <div class="bg-black" style="z-index:2;">
       <!-- 右上角通知與相機 -->
       <div class="position-absolute top-0 end-0 mt-6 me-6 d-flex gap-3 top-padding">
       <!-- 相機 -->
-      <div class="position-relative rounded-circle bg-white bg-opacity-50 p-3 d-flex align-items-center justify-content-center">
-        <img src="../assets/images/notification icon-white.png" alt="camera" width="24" height="24">
+      <div class="position-relative rounded-circle bg-white bg-opacity-50 p-3 d-flex align-items-center justify-content-center shadow-custom">
+        <img src="../assets/images/notification icon-white.png" alt="camera" width="24" height="24" style="z-index:2;">
         <!-- 紅點通知 -->
         <span class="position-absolute top-0 start-100 bg-danger text-white badge-overlap">
         1
@@ -21,8 +21,8 @@
       </div>
 
       <!-- 通知 -->
-      <div class="position-relative rounded-circle bg-white bg-opacity-50 p-3 d-flex align-items-center justify-content-center">
-        <img src="../assets/images/download.svg" alt="notification" width="24" height="24" class="opacity-75">
+      <div class="position-relative rounded-circle bg-white bg-opacity-50 p-3 d-flex align-items-center justify-content-center shadow-custom">
+        <img src="../assets/images/download.svg" alt="notification" width="24" height="24" style="z-index:2;">
         <!-- 紅點通知 -->
         <span class="position-absolute top-0 start-100 bg-danger text-white badge-overlap">
         1
@@ -30,10 +30,9 @@
         </div>
       </div>
 
-    
-      <!-- 頭像與名稱 -->
-        <div class="card-img-overlay d-flex flex-column align-items-center justify-content-end p-4" 
-          style="background: linear-gradient(to top, rgba(0,0,0,1), transparent);">
+      <div class="d-flex justify-content-center">
+        <!-- 頭像與名稱 -->
+        <div class="card-img-overlay d-flex flex-column align-items-center justify-content-end p-4" >
           
         <div class="position-relative mb-3 d-inline-block">
           <!-- 頭像 -->
@@ -48,15 +47,17 @@
         <p class="mb-6 fs-10 fw-light">一般會員</p>
     
         <!-- 點數 -->
-        <div class="d-flex align-items-center gap-1 mb-6">
+        <div class="d-flex align-items-center justify-content-center gap-1 mb-6">
           <img src="../assets/images/score icon-blue.png" alt="score" width="20">
           <span class="fw-normal fs-8">10,000點</span>
         </div>
       </div>
+
+      </div>
     </div>
   </div>
 
-  <div class="container bottom-padding-home-member">
+  <div class="container">
 
     <!-- 我的帳號與方案 -->
     <div class="d-flex flex-column align-items-center mb-4">
@@ -75,7 +76,7 @@
       <div class="row text-center">
         <!-- 任務集點 -->
         <div class="col">
-          <div class="d-flex flex-column align-items-center">
+          <div class="d-flex flex-column align-items-center justify-content-center">
             <div class="d-flex align-items-center gap-1 mb-1">
               <img src="../assets/images/score icon-blue.png" alt="score" width="20">
               <span class="fw-normal fs-8 text-white">任務集點</span>
@@ -85,7 +86,7 @@
         </div>
 
         <!-- 灰線分隔 -->
-        <div class="d-flex align-items-start py-1" style="width:1px;">
+        <div class="d-flex align-items-start py-1 px-0" style="width:1px;">
           <div class="border-start border-netural-500 opacity-50" style="height:40px;"></div>
         </div>
 
@@ -103,10 +104,16 @@
       </div>
     </div>
 
+    
+
+  </div>
+  
+  <div class="container pe-0">
+
     <!-- 繼續複習 -->
     <div class="mb-8">
       <div class="d-flex justify-content-between align-items-center mb-5"> 
-        <h6 class="fw-normal text-white mb-0">繼續複習</h6>
+        <h6 class="fw-normal text-white mb-0 letter-spacing-title">繼續複習</h6>
         <a href="#" class="d-flex align-items-center text-white text-decoration-none small">
           <span class="fw-normal">更多</span>
           <span class="material-icons-outlined">chevron_right</span>
@@ -115,7 +122,7 @@
       <!-- 影片輪播 (水平捲動) -->
       <div class="d-flex overflow-auto pb-2">
         <!-- 卡片  -->
-        <div class="card bg-card text-white border-0 rounded-2 me-5 overflow-hidden" style="width: 149px; flex-shrink: 0;">
+        <div class="card bg-card text-white border-0 rounded-2 me-5 overflow-hidden bg-tertiary-900" style="width: 149px; flex-shrink: 0;">
           <div class="position-relative" style="height: 90px;">
             <img src="../assets/images/friends8.png" class="w-100 h-100 object-fit-cover" alt="friends">
             <div class="carousel-gradient-card"></div><!-- 底部黑色漸層遮罩 -->
@@ -124,7 +131,7 @@
               <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
             </div>
             <!-- 播放進度時間 -->
-            <span class="badge position-absolute bottom-0 start-0">S3:E8</span>
+            <span class="badge position-absolute bottom-0 start-0  fs-12">S3:E8</span>
           </div>
           <!-- 進度條 -->
           <div class="progress bg-tertiary-400" style="height: 2px;">
@@ -136,16 +143,16 @@
             <span class="material-icons-outlined small">chevron_right</span>
           </div>
         </div>
-
+  
         <!-- 卡片  -->
-        <div class="card bg-card text-white border-0 rounded-2 me-5 overflow-hidden" style="width: 149px; flex-shrink: 0;">
+        <div class="card bg-card text-white border-0 rounded-2 me-5 overflow-hidden bg-tertiary-900" style="width: 149px; flex-shrink: 0;">
           <div class="position-relative" style="height: 90px;">
             <img src="../assets/images/the danish girl.jpg" class="w-100 h-100 object-fit-cover" alt="the danish girl">
             <div class="carousel-gradient-card"></div><!-- 底部黑色漸層遮罩 -->
             <div class="position-absolute top-50 start-50 translate-middle">
               <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
             </div>
-            <span class="badge position-absolute bottom-0 start-0">S3:E8</span>
+            <span class="badge position-absolute bottom-0 start-0  fs-12">S3:E8</span>
           </div>
           <div class="progress bg-tertiary-400" style="height: 2px;">
             <div class="progress-bar bg-white" role="progressbar" style="width: 20%;"></div>
@@ -155,16 +162,16 @@
             <span class="material-icons-outlined small">chevron_right</span>
           </div>
         </div>
-
+  
         <!-- 卡片 -->
-        <div class="card bg-card text-white border-0 rounded-2 me-5 overflow-hidden" style="width: 149px; flex-shrink: 0;">
+        <div class="card bg-card text-white border-0 rounded-2 me-5 overflow-hidden bg-tertiary-900" style="width: 149px; flex-shrink: 0;">
           <div class="position-relative" style="height: 90px;">
             <img src="../assets/images/fantastic beasts.jpg" class="w-100 h-100 object-fit-cover" alt="fantastic beasts">
             <div class="carousel-gradient-card"></div><!-- 底部黑色漸層遮罩 -->
             <div class="position-absolute top-50 start-50 translate-middle">
               <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
             </div>
-            <span class="badge position-absolute bottom-0 start-0">S3:E8</span>
+            <span class="badge position-absolute bottom-0 start-0  fs-12">S3:E8</span>
           </div>
           <div class="progress bg-tertiary-400" style="height: 2px;">
             <div class="progress-bar bg-white" role="progressbar" style="width: 20%;"></div>
@@ -177,11 +184,11 @@
       </div>
       
     </div>
-
-    <!-- 時事單字熱門片段 -->
+  
+    <!-- 歷史紀錄 -->
     <div class="mb-8">
       <div class="d-flex justify-content-between align-items-center mb-5"> 
-        <h6 class="fw-normal text-white mb-0">時事單字熱門片段</h6>
+        <h6 class="fw-normal text-white mb-0 letter-spacing-title">歷史紀錄</h6>
         <a href="#" class="d-flex align-items-center text-white text-decoration-none small">
           <span class="fw-normal">更多</span>
           <span class="material-icons-outlined">chevron_right</span>
@@ -190,7 +197,7 @@
       <!-- 影片輪播 (水平捲動) -->
       <div class="d-flex overflow-auto pb-2 fw-light">
     
-
+  
         <!-- 卡片 -->
         <div class="card bg-transparent text-white border-0 rounded-2 me-5 overflow-hidden" style="width: 90px; flex-shrink: 0;">
           <div class="position-relative mb-1" style="height: 130px;">
@@ -200,7 +207,7 @@
             <span class="fs-10">2012</span>
           </div>
         </div>
-
+  
         <!-- 卡片 -->
         <div class="card bg-transparent text-white border-0 rounded-2 me-5 overflow-hidden" style="width: 90px; flex-shrink: 0;">
           <div class="position-relative mb-1" style="height: 130px;">
@@ -210,7 +217,7 @@
             <span class="fs-10">Kpop獵魔女團</span>
           </div>
         </div>
-
+  
         <!-- 卡片 -->
         <div class="card bg-transparent text-white border-0 rounded-2 me-5 overflow-hidden" style="width: 90px; flex-shrink: 0;">
           <div class="position-relative mb-1" style="height: 130px;">
@@ -220,7 +227,7 @@
             <span class="fs-10">ColdPlay紀錄片</span>
           </div>
         </div>
-
+  
         <!-- 卡片 -->
         <div class="card bg-transparent text-white border-0 rounded-2 me-5 overflow-hidden" style="width: 90px; flex-shrink: 0;">
           <div class="position-relative mb-1" style="height: 130px;">
@@ -232,55 +239,53 @@
         </div>
       </div>
     </div>
-
-    <!-- 功能管理 -->
-    <div>
-      <h6 class="fw-normal text-white mb-6">功能管理</h6>
-
-      <!-- 個人資料 -->
-      <div class="d-flex justify-content-between align-items-center text-white mb-3 fw-light"> 
-        <span class="fs-9">個人資料</span>
-        <a href="#">
-          <span class="material-icons-outlined fs-6">chevron_right</span>
-        </a>
-      </div>
-      <!-- 灰線 -->
-      <div class="border-bottom border-netural-500 opacity-50 border-1 mb-3"></div>
-
-      <!-- 相關設定 -->
-      <div class="d-flex justify-content-between align-items-center text-white mb-3 fw-light"> 
-        <span class="fs-9">相關設定</span>
-        <a href="#">
-          <span class="material-icons-outlined fs-6">chevron_right</span>
-        </a>
-      </div>
-      <!-- 灰線 -->
-      <div class="border-bottom border-netural-500 opacity-50 border-1 mb-3"></div>
-
-      <!-- 幫助中心 -->
-      <div class="d-flex justify-content-between align-items-center text-white mb-3 fw-light"> 
-        <span class="fs-9">幫助中心</span>
-        <a href="#">
-          <span class="material-icons-outlined fs-6">chevron_right</span>
-        </a>
-      </div>
-      <!-- 灰線 -->
-      <div class="border-bottom border-netural-500 opacity-50 border-1 mb-3"></div>
-
-      <!-- 訊息通知 -->
-      <div class="d-flex justify-content-between align-items-center text-white mb-3 fw-light"> 
-        <span class="fs-9">訊息通知</span>
-        <a href="#">
-          <span class="material-icons-outlined fs-6">chevron_right</span>
-        </a>
-      </div>
-      <!-- 灰線 -->
-      <div class="border-bottom border-netural-500 opacity-50 border-1 mb-3"></div>
-
-    </div>
-    
   </div>
+  
+  <!-- 功能管理 -->
+  <div class="container bottom-padding-home-member">
+    <h6 class="fw-normal text-white mb-6">功能管理</h6>
 
+    <!-- 個人資料 -->
+    <div class="d-flex justify-content-between align-items-center text-white mb-3 fw-light"> 
+      <span class="fs-9">個人資料</span>
+      <a href="#">
+        <span class="material-icons-outlined fs-6">chevron_right</span>
+      </a>
+    </div>
+    <!-- 灰線 -->
+    <div class="border-bottom border-netural-500 opacity-50 border-1 mb-3"></div>
+
+    <!-- 相關設定 -->
+    <div class="d-flex justify-content-between align-items-center text-white mb-3 fw-light"> 
+      <span class="fs-9">相關設定</span>
+      <a href="#">
+        <span class="material-icons-outlined fs-6">chevron_right</span>
+      </a>
+    </div>
+    <!-- 灰線 -->
+    <div class="border-bottom border-netural-500 opacity-50 border-1 mb-3"></div>
+
+    <!-- 幫助中心 -->
+    <div class="d-flex justify-content-between align-items-center text-white mb-3 fw-light"> 
+      <span class="fs-9">幫助中心</span>
+      <a href="#">
+        <span class="material-icons-outlined fs-6">chevron_right</span>
+      </a>
+    </div>
+    <!-- 灰線 -->
+    <div class="border-bottom border-netural-500 opacity-50 border-1 mb-3"></div>
+
+    <!-- 訊息通知 -->
+    <div class="d-flex justify-content-between align-items-center text-white mb-3 fw-light"> 
+      <span class="fs-9">訊息通知</span>
+      <a href="#">
+        <span class="material-icons-outlined fs-6">chevron_right</span>
+      </a>
+    </div>
+    <!-- 灰線 -->
+    <div class="border-bottom border-netural-500 opacity-50 border-1 mb-3"></div>
+
+  </div>
 
 
   <script type="module" src="../main.js"></script>

@@ -13,11 +13,19 @@ document.querySelectorAll('.footer-nav a[href^="#"]').forEach(link => {
 
 
 const header = document.getElementById('review-header');
+const headerWidth =  header.getBoundingClientRect().width;
+header.style.setProperty('--header-width', `${headerWidth}px`);
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 0) {
+  if (window.scrollY > 0 && !header.classList.contains('scrolled')) {
     header.classList.add('scrolled');
-  } else {
+  }
+  if(window.scrollY <= 0) {
     header.classList.remove('scrolled');
   }
+});
+
+window.addEventListener('resize', () => {
+  const headerWidth =  header.getBoundingClientRect().width;
+  header.style.setProperty('--header-width', `${headerWidth}px`);
 });

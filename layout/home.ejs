@@ -42,7 +42,6 @@
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="4"></button>
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="5"></button>
         <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="6"></button>
-        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="7"></button>
       </div>
 
       <!-- 左右切換箭頭 -->
@@ -58,29 +57,26 @@
 
     
     <!-- <div class="container"> -->
-    <div class="container bottom-padding right-padding fw-light">
-      <!-- 分類按鈕 -->
-      <div class="py-4 mb-8 ">
-        <ul class="nav nav-pills" role="tablist">
+    <div class="container bottom-padding-home right-padding fw-light">
+      <div class="py-4 mb-8">
+        <ul class="nav nav-pills pills-static pe-none" role="tablist" aria-label="分類">
           <li class="nav-item" role="presentation">
-            <input type="radio" class="btn-check" name="category" id="movie" autocomplete="off" checked>
-            <label class="nav-link rounded-pill px-5" for="movie">電影</label>
+            <span class="nav-link rounded-pill px-5 py-2 fs-10 is-active" aria-current="page">電影</span>
           </li>
           <li class="nav-item" role="presentation">
-            <input type="radio" class="btn-check" name="category" id="series" autocomplete="off">
-            <label class="nav-link rounded-pill px-5" for="series">影集</label>
+            <span class="nav-link rounded-pill px-5 py-2 fs-10">影集</span>
           </li>
           <li class="nav-item" role="presentation">
-            <input type="radio" class="btn-check" name="category" id="anime" autocomplete="off">
-            <label class="nav-link rounded-pill px-5" for="anime">動畫</label>
+            <span class="nav-link rounded-pill px-5 py-2 fs-10">動畫</span>
           </li>
         </ul>
       </div>
 
 
+
       <!-- 繼續觀看 -->
       <div class="mb-8">
-        <h6 class="fw-normal text-white mb-5">繼續觀看</h6 >
+        <h6 class="fw-normal text-white mb-5 letter-spacing-title">繼續觀看</h6 >
         <!-- 影片輪播 (水平捲動) -->
         <div class="d-flex overflow-auto pb-2">
           <!-- 卡片  -->
@@ -93,7 +89,7 @@
                 <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
               </div>
               <!-- 播放進度時間 -->
-              <span class="badge position-absolute bottom-0 start-0">S3:E8</span>
+              <span class="badge position-absolute bottom-0 start-0 fs-12">S3:E8</span>
             </div>
             <!-- 進度條 -->
             <div class="progress bg-tertiary-400" style="height: 2px;">
@@ -114,7 +110,7 @@
               <div class="position-absolute top-50 start-50 translate-middle">
                 <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
               </div>
-              <span class="badge position-absolute bottom-0 start-0">S3:E8</span>
+              <span class="badge position-absolute bottom-0 start-0 fs-12">S3:E8</span>
             </div>
             <div class="progress bg-tertiary-400" style="height: 2px;">
               <div class="progress-bar bg-white" role="progressbar" style="width: 20%;"></div>
@@ -133,7 +129,7 @@
               <div class="position-absolute top-50 start-50 translate-middle">
                 <img src="../assets/images/Play.png" alt="camera" width="32" height="32">
               </div>
-              <span class="badge position-absolute bottom-0 start-0">S3:E8</span>
+              <span class="badge position-absolute bottom-0 start-0 fs-12">S3:E8</span>
             </div>
             <div class="progress bg-tertiary-400" style="height: 2px;">
               <div class="progress-bar bg-white" role="progressbar" style="width: 20%;"></div>
@@ -150,7 +146,7 @@
       <!-- 學過的都演給你看 -->
       <div class="mb-8">
         <div class="d-flex justify-content-between align-items-center mb-5"> 
-          <h6 class="fw-normal text-white mb-0">學過的都演給你看</h6>
+          <h6 class="fw-normal text-white mb-0 letter-spacing-title">學過的都演給你看</h6>
           <a href="./review.html" class="d-flex align-items-center text-white text-decoration-none small">
             <span class="fw-normal">更多</span>
             <span class="material-icons-outlined">chevron_right</span>
@@ -205,7 +201,7 @@
       <!-- 歷史紀錄 -->
       <div class="mb-8">
         <div class="d-flex justify-content-between align-items-center mb-5"> 
-          <h6 class="fw-normal text-white mb-0">歷史紀錄</h6>
+          <h6 class="fw-normal text-white mb-0 letter-spacing-title">歷史紀錄</h6>
           <a href="#" class="d-flex align-items-center text-white text-decoration-none small">
             <span class="fw-normal">更多</span>
             <span class="material-icons-outlined">chevron_right</span>
@@ -259,9 +255,9 @@
       </div>
 
       <!-- 十大熱播排行 -->
-      <div class="mb-8">
+      <div>
         <div class="d-flex justify-content-between align-items-center mb-5"> 
-          <h6 class="fw-normal text-white mb-0">十大熱播排行</h6>
+          <h6 class="fw-normal text-white mb-0 letter-spacing-title">十大熱播排行</h6>
           <a href="#" class="d-flex align-items-center text-white text-decoration-none small">
             <span class="fw-normal">更多</span>
             <span class="material-icons-outlined">chevron_right</span>
