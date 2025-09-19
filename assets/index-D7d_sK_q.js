@@ -1,1 +1,0 @@
-import"./index-DdMuGOvR.js";import"./bootstrap.esm-pHIF-KX_.js";const e=document.getElementById("landing-bg");let t=0;const o=.2;function n(){t+=o,e.style.backgroundPositionY=`${-t}px`,requestAnimationFrame(n)}n();
